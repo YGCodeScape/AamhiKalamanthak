@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -110,36 +112,33 @@ nav {
   align-items:center;
   justify-content:space-between;
   z-index: -9;
-  /* background-color: rgb(251, 242, 192); */
 }
 .hero-left {
     width: 50%;
     height: 100%;
-    /* background: url(./img/shabda-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
     display: flex;
     flex-direction: column;
-    padding-left: 4rem;
+    padding-left: 5rem;
     padding-top: 5rem;
 }
 .title {
     font-size: 2.5rem;
-    font-weight:500;
-    font-family: "Outfit", sans-serif;
+    font-weight:600;
+    font-family: "Tiro Devanagari Marathi", serif;
     color: #99582a;
     margin-bottom: 3px;
+    line-height: 1;
 }
 .author-name {
-    font-size: 40px;
-    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    font-family: "Rozha One", serif;
     text-transform: capitalize;
     color: #99582a;
     letter-spacing: 2px;
+    line-height: 1;
 }
 .hero-left p {
-    width: 60%;
+    width: 70%;
     text-align: start;
     font-size: 25px;
     font-weight: 400;
@@ -148,12 +147,14 @@ nav {
     margin-left: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    line-height: 1;
 }
 .sub-text {
     font-size: 25px;
     font-weight:600;
     font-family: "Tiro Devanagari Marathi", serif;
     color: #964a07;
+    line-height: 1;
 }
 
 .hero-right {
@@ -176,9 +177,9 @@ nav {
 
 .author-img-sec {
     position: absolute;
-    width: 25rem;
-    height: 25rem;
-    top: 8rem;
+    width: 30rem;
+    height: 30rem;
+    top: 7rem;
     left: 10rem;
     z-index: 99;
 }
@@ -187,8 +188,10 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+/*-------------------------- */
 /*-----------------media query--- */
-@media screen and (max-width: 1159px) and (min-width: 960px) {
+
+@media screen and (max-width: 1200px) and (min-width: 960px) {
     nav {
         padding: 0 0.7rem;
     }
@@ -199,10 +202,49 @@ nav {
     .nav-li {
          padding: 0.2rem 0.4rem;
     }
+    .hero-left {
+        padding-left: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+        width:40%;
+    }
+    .title {
+        line-height: 1;
+    }
+    .author-name {
+        font-size: 2.6rem;
+        line-height: 1;
+    }
+    .hero-left p {
+        width: 100%;
+        margin-left: 1rem;
+    }
+    .hero-right {
+        width: 60%;
+    }
+    .author-img-sec {
+        top: 12rem;
+        left: 14rem;
+    } 
 }
 
 @media screen and (max-width: 959px) and (min-width: 760px) {
     .nav-ul {
+        display: none;
+    }
+    .hero-left {
+        padding-left: 2rem;
+        padding-top: 2rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .hero-right {
+        width: 100%;
+        background: linear-gradient(to right, #dda15e, #99582a);
+    }
+
+    .hero-right  svg {
         display: none;
     }
 }
