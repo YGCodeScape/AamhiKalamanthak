@@ -20,8 +20,8 @@
             </div>
             <div class="navigation">
                  <ul class="nav-ul">
-                     <li class="nav-li"><a href="#">Home</a></li>
-                     <li class="nav-li"><a href="#">About Writer</a></li>
+                     <!-- <li class="nav-li"><a href="#" class="active-nav">Home</a></li> -->
+                     <li class="nav-li"><a href="#hero-sec">About Writer</a></li>
                      <li class="nav-li"><a href="#">All Poems</a></li>
                      <li class="nav-li"><a href="#">Contact</a></li>
                      <li class="nav-li"><a href="#">See Books</a></li>
@@ -33,9 +33,30 @@
         </nav>
     </header>
     <main>
-        <div class="hero-sec">
-            <div class="hero-right"></div>
-            <div class="hero-left"></div>
+        <div class="hero-sec " id="hero-sec">
+            <div class="hero-left">
+                 <span class="title">Author</span>
+                 <h1 class="author-name">Abhay Harichandra Shigavan</h1>
+                 <p>महाराष्ट्र भूषण सन्मान पुरस्कार सन्मानित, आंतरराष्ट्रीय लेखक पुरस्कार सन्मानित,
+                    (युवा लेखक,कवी,नाटककार,व्याख्याते )</p>
+                  <span class="sub-text">"शब्द माझं साधन नाही, तेच माझं अस्तित्व आहे..."</span>
+            </div>
+            <div class="hero-right">
+                 <svg viewBox="0 0 500 600">
+                    <defs>
+                      <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                         <stop offset="0%" stop-color="#99582a"/>
+                         <stop offset="100%" stop-color="#dda15e"/>
+                      </linearGradient>
+                    </defs>
+                     <path 
+                         d="M 2 -6 Q -55 306 -1 603 Q 0 604 800 605 L 803 -7 Z" 
+                        fill="url(#myGradient)" />
+                 </svg>
+                <div class="author-img-sec">
+                    <img src="./img/Author-img.png" alt="Author img" class="author-img">
+                </div>
+            </div>
         </div>
         <div class="box" style="width: 400px; height:800px; background-color: #3d3939;  margin-top: 60px;"></div>
         <div class="box" style="width: 400px; height:800px; background-color: #502c2c;"></div>

@@ -1,3 +1,17 @@
-logo font color #99582a;
+logo font color / nav li  #99582a;
 header color #ffe6a7
-nav li border #dda15e
+nav li border #bc6c25
+menu i #bc6c25
+
+soft nav tag - rgb(251, 242, 192)
+
+soft svg background
+<stop offset="0%" stop-color="#fbf2c0"/>
+<stop offset="100%" stop-color="#ffe6a7
+
+old curve path =  d="M -1 1 Q -55 306 -1 599 Q 1 601 800 600 L 800 0 Z"
+final curve path = d="M 2 -6 Q -55 306 -1 603 Q 0 604 800 605 L 803 -7 Z" 
+
+dark svg background
+<stop offset="0%" stop-color="#99582a"/>
+<stop offset="100%" stop-color="#dda15e"/>
