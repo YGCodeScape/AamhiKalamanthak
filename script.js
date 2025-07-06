@@ -59,7 +59,7 @@ function applyResponsivePath() {
   const pathEl = document.querySelector('.svg-screen1 > path');
   
   let d = SVG_PATHS.default;               // desktop default
-   if (w >= 760 && w <= 959) d = SVG_PATHS.lg;
+   if (w >= 768 && w <= 1024) d = SVG_PATHS.lg;
    else if (w >= 1025 && w <= 1280) d = SVG_PATHS.md;
    else if (w >= 1281 && w <= 1440) d = SVG_PATHS.xl;
   pathEl.setAttribute('d', d);
