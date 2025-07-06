@@ -1,13 +1,15 @@
 var menu = document.querySelector(".menu-icon")
+var closeI = document.querySelector(".close"); 
+var MLink = document.querySelector(".menu-tag a")
 
+var tl = gsap.timeline();
 
-
-gsap.to(".nav-li a", {
-    // yPercent: -100,
-    // opacity: 0,
+gsap.to(".nav-li", {
+    yPercent: -100,
+    opacity: 0,
     duration: 0.2,
-        color: "#bc6c25",
-    // stagger: 0.05,           // little cascade, optional
+        // color: "#bc6c25",
+    stagger: 0.05,           // little cascade, optional
     scrollTrigger: {
       trigger: "header",     // element whose position we watch
       start: "top top",      // when header’s top meets viewport top
@@ -17,7 +19,7 @@ gsap.to(".nav-li a", {
     }
 });
 
-gsap.to(".menu i", {
+gsap.to(".menu-icon", {
     color: "#bc6c25",
     duration: 1.5,
     delay: 1,
@@ -30,6 +32,38 @@ gsap.to(".menu i", {
     }
 });
 
+tl.from(".menu", {
+    right: "-100%",
+    duration: 0.6,
+})
+
+tl.from(".menu h4", {
+    x : 150,
+    duration: 0.4,
+    stagger : 0.2,
+    opacity: 0,
+})
+tl.from(".menu i", {
+    opacity: 0,
+})
+
+tl.pause()
+
+menu.addEventListener("click", function() {
+    tl.play();
+})
+closeI.addEventListener("click", function(){
+    gsap.to(".menu .close", {
+        rotate: "+=90",
+        duration: 0.3,
+        ease: "power2.out"
+    })
+    tl.reverse();
+})
+
+MLink.addEventListener("click", function() {
+  tl.reverse();
+})
 
 function svgPathChanger() {
   

@@ -31,6 +31,7 @@ nav {
 .navigation {
     display: flex;
     align-items: center;
+    position: relative; /* added */
     gap: 2rem;
     margin-right: 1rem;
 } 
@@ -90,20 +91,51 @@ nav {
     height: 100%;
 }
 .menu {
- width: 35px;
- height: 30px;
- gap: 3px;
- display: flex;
- flex-direction: column;
- justify-content: center;
- cursor: pointer;
+    width: 75%;
+    height: 33rem;
+    background-color: #dda25eb6;
+    position: absolute;
+    right: -6%;
+    top: -3.1rem;
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    padding-top: 100px;
+    padding-left: 50px;
 }
-.menu i {
+.menu h4 a{
+    width: 75%;
+    font-size: 40px;
+    font-weight: 400;
+    color:#290d02;
+    margin:6px 0;
+    padding: 4px;
+    font-size: 20px;
+    font-family: "Comic Relief", system-ui;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.close {
+    background-color:#290d02;
+    color: #ffe6a7;
+    border-radius: 50%;
+    font-size: 25px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    padding: 5px;
+    cursor: pointer;
+}
+.menu-icon {
     display: inline-block;
     font-size: 2.4rem;
     font-weight: 800;
     color: rgb(251, 242, 192);
+    cursor: pointer;
 }
+
 /*-------------hero section -----*/
 .hero-sec {
   width: 100%;
