@@ -191,73 +191,187 @@ nav {
 /*-------------------------- */
 /*-----------------media query--- */
 
-@media screen and (max-width: 1200px) and (min-width: 960px) {
-    nav {
-        padding: 0 0.7rem;
+/* Small mobile (321–480px) */
+@media (max-width: 480px) {
+    .nav-ul {
+        display: none;
+    }
+    .menu i {
+        color: #bc6c25;
+    }
+    .hero-sec {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .hero-left {
+        width: 100%;
+        padding-top: 11rem;
+        padding-left: 2rem;
+    }
+
+    .hero-right {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .author-img-sec {
+       position: absolute;
+       width: 15rem;
+       height: 18rem;
+       top: 1rem;
+       left: 1rem;
+    }
+    .hero-right svg {
+        display: none;
+    }
+}
+
+
+/* Large mobile (601–767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .word-mark {
+        width: 250px;
+        height:150px;
+    }
+    .hero-sec {
+        height: 70vh;
+    }
+    .hero-right{
+        height: 70vh;
+    }
+    .nav-ul {
+        display: none;
+    }
+    .hero-right svg {
+        display: none;
+    }
+    .hero-left {
+        width: 60%;
+        height: auto;
+        padding-left: 3rem;
+        padding-top: 4rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .author-name {
+        font-size: 2.5rem;
+    }
+    .hero-left p {
+        font-size: 20px;
+    }
+    .sub-text {
+        font-size: 20px;
+    }
+    .hero-right {
+        width: 40%;
+    }
+    .author-img-sec {
+        width: 15rem;
+        height: 18rem;
+        top: -0.2rem;
+        left: 2rem;
+    }
+}
+
+/* Tablets portrait (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .word-mark {
+    width: 230px;
+    height: 130px; 
+    }
+
+    .nav-ul {
+        display: none;
+    }
+    .hero-sec {
+        height: 80vh;
+    }
+
+    .hero-left {
+        padding-top: 10rem;
+        padding-left: 2rem;
+    }
+     .title {
+        font-size: 2rem;
+    }
+    .author-name {
+        font-size: 2.5rem;
+    }
+    .hero-left p {
+        font-size: 20px;
+    }
+    .sub-text {
+        font-size: 20px;
+    }
+    .author-img-sec {
+    width: 15rem;
+    height: 20rem;
+    top: 7rem;
+    left: 9rem;
+    }
+}
+
+
+/* Small laptops (up to 1280px) */
+@media (min-width: 1025px) and (max-width: 1439px) {
+    .nav-li a {
+        font-size: 16px;
     }
     .navigation {
         gap: 1rem;
-        margin-right: 0.5rem;
+        margin: 0;
     }
-    .nav-li {
-         padding: 0.2rem 0.4rem;
-    }
-    .hero-left {
-        padding-left: 4rem;
+     .hero-left {
         padding-top: 2rem;
-        padding-bottom: 6rem;
-        width:40%;
+        padding-left: 3rem;
+        gap: 5px;
     }
-    .title {
-        line-height: 1;
-    }
-    .author-name {
-        font-size: 2.6rem;
-        line-height: 1;
-    }
-    .hero-left p {
-        width: 100%;
-        margin-left: 1rem;
-    }
-    .hero-right {
-        width: 60%;
-    }
-    .author-img-sec {
-        top: 12rem;
-        left: 14rem;
-    } 
-}
-
-@media screen and (max-width: 959px) and (min-width: 760px) {
-    .nav-ul {
-        display: none;
-    }
-    .hero-left {
-        padding-left: 2rem;
-        padding-top: 2rem;
-    }
-    .title {
+        .title {
         font-size: 2.5rem;
     }
-    .hero-right {
-        width: 100%;
-        background: linear-gradient(to right, #dda15e, #99582a);
+    .author-name {
+        font-size: 3rem;
+    }
+    .hero-left p {
+        font-size: 25px;
+    }
+    .sub-text {
+        font-size: 25px;
+    }
+    .author-img-sec {
+        width: 20rem;
+        height: 25rem;
+        left: 8rem;
     }
 
-    .hero-right  svg {
-        display: none;
-    }
 }
-@media screen and (max-width: 759px) and (min-width: 480px) {
-    .nav-ul {
-        display: none;
+
+/* Desktop (1281–1440px) */
+@media (min-width:1440px ) {
+    .nav-li a {
+        font-size: 22px;
     }
-}
-@media screen and (max-width: 479px) and (min-width: 300px) {
-        .nav-ul {
-        display: none;
+    .hero-sec, .hero-right {
+        height: 100vh;
     }
-    .navigation{
-        margin : 0;
+    .hero-left {
+        padding-top: 15rem;
+        gap: 10px;
+    }
+    .title {
+        font-size: 3.5rem;
+    }
+    .author-name {
+        font-size: 4rem;
+    }
+    .hero-left p {
+        font-size: 35px;
+    }
+    .sub-text {
+        font-size: 32px;
     }
 }

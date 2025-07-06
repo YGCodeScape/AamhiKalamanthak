@@ -36,7 +36,9 @@ function svgPathChanger() {
 /* -------- 1. all the paths in one place -------- */
 const SVG_PATHS = {
   default: 'M 2 -6 Q -55 306 -1 603 Q 0 604 800 605 L 803 -7 Z',
-  lg:      'M 112 -125 Q 32 161 116 464 Q 115 466 548 468 L 545 -127 Z',   // 960‑1159
+  lg:      'M 50 -66 Q -19 249 74 548 Q 76 548 555 546 L 557 -66 Z',   // 768‑1024
+  md:      'M 69 -57 Q -21 231 74 548 Q 76 548 555 546 L 550 -56 Z',   // 1025-1280
+  xl:      'M 89 -180 Q -38 219 77 603 Q 77 603 800 605 L 800 -177 Z'       // 1281–1440
 };
 
 /* -------- 2. throttle so resize isn’t chatty ---- */
@@ -57,7 +59,9 @@ function applyResponsivePath() {
   const pathEl = document.querySelector('.svg-screen1 > path');
   
   let d = SVG_PATHS.default;               // desktop default
-   if (w >= 960 && w <= 1200) d = SVG_PATHS.lg;
+   if (w >= 760 && w <= 959) d = SVG_PATHS.lg;
+   else if (w >= 1025 && w <= 1280) d = SVG_PATHS.md;
+   else if (w >= 1281 && w <= 1440) d = SVG_PATHS.xl;
   pathEl.setAttribute('d', d);
 }
 
