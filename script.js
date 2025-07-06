@@ -1,6 +1,6 @@
 var menu = document.querySelector(".menu-icon")
 var closeI = document.querySelector(".close"); 
-var MLink = document.querySelector(".menu-tag a")
+var menuItems = document.querySelectorAll(".menu-tag a")
 
 var tl = gsap.timeline();
 
@@ -61,9 +61,9 @@ closeI.addEventListener("click", function(){
     tl.reverse();
 })
 
-MLink.addEventListener("click", function() {
-  tl.reverse();
-})
+menuItems.forEach(item => {
+  item.addEventListener("click", () => tl.reverse());
+});
 
 function svgPathChanger() {
   

@@ -91,7 +91,7 @@ nav {
     height: 100%;
 }
 .menu {
-    width: 75%;
+    width: 45%;
     height: 33rem;
     background-color: #dda25eb6;
     position: absolute;
@@ -100,22 +100,28 @@ nav {
     backdrop-filter: blur(10px);
     z-index: 9;
     padding-top: 100px;
-    padding-left: 50px;
+    padding-left: 20px;
+    border-bottom-left-radius: 50px;
+}
+.menu h4 {
+    margin-bottom: 1.2rem;
 }
 .menu h4 a{
-    width: 75%;
     font-size: 40px;
     font-weight: 400;
     color:#290d02;
     margin:6px 0;
     padding: 4px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Comic Relief", system-ui;
     text-transform: capitalize;
     border: none;
     cursor: pointer;
     text-decoration: none;
-
+    transition: 0.2s ease-in-out;
+}
+.menu h4 a:hover {
+     color: #964a07;
 }
 .close {
     background-color:#290d02;
