@@ -10,6 +10,15 @@ body {
 html {
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffe6a7; 
+}
+ ::-webkit-scrollbar-thumb {
+  background: #bc6c25; 
+}
 
 header {
     position: fixed;
@@ -20,11 +29,14 @@ header {
     z-index: 100;
     margin: 0;
 }
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    position: relative;
+    flex-wrap: nowrap;
 }
 .word-mark {
     width: 260px;
@@ -135,7 +147,7 @@ nav {
     position: relative;
     display: flex;
     flex-direction: row;
-    background-color: #fefae0;
+    background-color: #fefae028;
 }
 
 .hero-left {
@@ -223,7 +235,11 @@ nav {
 /*-----------------media query--- */
 
 /* Small mobile (321–480px) */
-@media (min-width: 200px) and (max-width: 480px) {
+@media (max-width: 480px) {
+    .word-mark {
+        width: 50vw;
+        height: 15vh;
+    }
     .nav-tag {
         display: none;
     }
@@ -253,13 +269,13 @@ nav {
     width: 20rem;
     height: 22rem;
     top: 3rem;
-    left: 4rem;
+    left: 2rem;
    }
    .menu {
-    width: 55%;
+    width: 60%;
    }
    .close{
-    right: 20%;
+    right: 18%;
    }
 
 }
@@ -311,7 +327,44 @@ nav {
 
 }
 /* Tablets portrait (768–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 920px) {
+     .nav-tag a {
+        font-size: 1rem;
+    }
+    .word-mark {
+     width: 200px;   
+    }
+    .hero-left {
+        width: 60%;
+        padding-left: 2rem;
+    }
+    .title {
+       font-size: 2rem;
+    }
+    .author-name {
+        font-size: 2.8rem;
+    }
+    .hero-left p {
+        width: 100%;
+        font-size: 22px;
+    }
+    .sub-text {
+       font-size: 22px;
+    }
+    .hero-right {
+        width: 40%;
+    }
+    .author-img-sec {
+        left: 0.1rem;
+        width: 20rem;
+        height: 20rem;
+    }
+    .hero-left p {
+        margin-left: 1.5rem;
+    }
+
+}
+@media (min-width: 921px) and (max-width: 1024px) {
     .hero-left {
         width: 60%;
     }
@@ -324,5 +377,4 @@ nav {
     .hero-left p {
         margin-left: 1.5rem;
     }
-
 }

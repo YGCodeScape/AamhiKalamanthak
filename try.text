@@ -19,4 +19,109 @@ js
   s :      'M -670 368 Q 194 740 1141 364 Q 1141 364 1125 -784 L -691 -767 Z',    // 481- 767
   lg:      'M 50 -66 Q -19 249 74 548 Q 76 548 555 546 L 557 -66 Z',   // 768‑1024
 ----------------------------------
+my media queries 
 
+/* Small mobile (321–480px) */
+@media (min-width: 200px) and (max-width: 480px) {
+    .nav-tag {
+        display: none;
+    }
+    .hero-sec {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .hero-left {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    padding-top: 12rem;
+    gap: 0.6rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #964a07;
+   }
+   .hero-left p {
+       width: 100%;
+       margin-left: 0.4rem;
+   }
+   .hero-right {
+       width: 100%;
+       height: 50vh;
+   }
+   .author-img-sec {
+    width: 20rem;
+    height: 22rem;
+    top: 3rem;
+    left: 4rem;
+   }
+   .menu {
+    width: 55%;
+   }
+   .close{
+    right: 20%;
+   }
+
+}
+/* Large mobile (481–767px) */
+@media (min-width: 481px) and (max-width: 767px) { 
+     .nav-tag {
+        display: none;
+     }
+    .hero-sec {
+        width: 100%;
+        height: auto;
+    }
+    .hero-left {
+    width: 60%;
+    height: 100%;
+    padding-left: 2rem;
+    padding-top: 11rem;
+    gap: 0.6rem;
+   }
+   .hero-left p {
+       width: 100%;
+       margin-left: 0.4rem;
+   }
+   .hero-right {
+       width: 40%;
+       height: 100vh;
+   }
+       .author-img-sec {
+        width: 20rem;
+        height: 20rem;
+        left: -2rem;
+        position: absolute;
+     }
+   .menu {
+    width: 40%;
+   }
+   .close{
+    right: 20%;
+   }
+   .title {
+    font-size: 2rem;
+   }
+   .author-name {
+    font-size: 2.5rem;
+   }
+   .hero-left p, .sub-text {
+    font-size: 20px;
+   }
+
+}
+/* Tablets portrait (768–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-left {
+        width: 60%;
+    }
+    .hero-right {
+        width: 40%;
+    }
+    .author-img-sec {
+        left: 0.1rem;
+    }
+    .hero-left p {
+        margin-left: 1.5rem;
+    }
+
+}

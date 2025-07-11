@@ -2,7 +2,6 @@ var menu = document.querySelector(".menu-icon");
 var closeI = document.querySelector(".close");
 var menuItems = document.querySelectorAll(".menu-tag a")
 
-
 var tl = gsap.timeline();
 
 gsap.to(".nav-tag ", {
@@ -18,6 +17,22 @@ gsap.to(".nav-tag ", {
         // markers: true
     }
 })
+// Check if the screen width is 480px or less
+if (window.matchMedia("(max-width: 480px)").matches) {
+  gsap.to("nav", {
+    duration: 0.4,
+    backgroundColor: "#fdebbcf5",
+    backdropFilter: "blur(10px)",
+    scrollTrigger: {
+      trigger: "header",
+      start: "top top",
+      end: "top -10%",
+      scrub: true,
+      // markers: true
+    }
+  });
+}
+
 
 tl.from(".menu", {
     right: "-100%",
@@ -51,3 +66,4 @@ closeI.addEventListener("click", function(){
 menuItems.forEach(item => {
   item.addEventListener("click", () => tl.reverse());
 });
+
