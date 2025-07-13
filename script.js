@@ -17,6 +17,20 @@ gsap.to(".nav-tag ", {
         // markers: true
     }
 })
+
+gsap.to(".word-mark img", {
+    width: "100px",
+    height: "100px",
+    x: "-20px",
+    duration: 0.1,
+    scrollTrigger : {
+        trigger: ".hero-sec",
+        start: "bottom bottom",
+        scrub: true,
+        // markers: true
+    }
+})
+
 // Check if the screen width is 480px or less
 if (window.matchMedia("(max-width: 480px)").matches) {
   gsap.to("nav", {

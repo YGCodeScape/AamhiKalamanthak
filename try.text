@@ -14,114 +14,123 @@ dark svg background
 <stop offset="0%" stop-color="#99582a"/>
 <stop offset="100%" stop-color="#dda15e"/>
 
-js
-   if (w >= 481 && w <= 767) d = SVG_PATHS.s;
-  s :      'M -670 368 Q 194 740 1141 364 Q 1141 364 1125 -784 L -691 -767 Z',    // 481- 767
-  lg:      'M 50 -66 Q -19 249 74 548 Q 76 548 555 546 L 557 -66 Z',   // 768‑1024
+// gsap.to(".word-mark ", {
+//     width: "180px",
+//     opacity: 0,
+//     duration: 0.1,
+//     scrollTrigger : {
+//         trigger: ".hero-sec",
+//         start: "bottom bottom",
+//         scrub: true,
+//         markers: true
+//     }
+// })
+
+.word-mark {
+     width: 260px;
+    height: 140px;
+}
+----------------
+/* Container styling */
+.poem-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+  background-color: #fefefe;
+}
+
+/* Featured Poem */
+.featured-poem {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: #fff4e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.f-poem-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.f-poem-hold .poem-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #b2531b;
+}
+
+.f-poem-hold .poem-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.f-poem-hold .read-more {
+  margin-top: 10px;
+  background-color: #b2531b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.f-poem-hold .read-more:hover {
+  background-color: #9e3d0f;
+}
+
+/* Latest Poems Container */
+.latest-poems {
+  flex: 2 1 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Each Poem Box */
+.poem-frame {
+  background-color: #fff0f5;
+  flex: 1 1 250px;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.poem-frame:hover {
+  transform: translateY(-4px);
+}
+
+.poem-hold .poem-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #c2185b;
+}
+
+.poem-hold .poem-content {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.poem-hold .read-more {
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.poem-hold .read-more:hover {
+  background-color: #a5114a;
+}
+
 ----------------------------------
-my media queries 
-
-/* Small mobile (321–480px) */
-@media (min-width: 200px) and (max-width: 480px) {
-    .nav-tag {
-        display: none;
-    }
-    .hero-sec {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-    .hero-left {
-    width: 100%;
-    height: 100%;
-    padding-left: 2rem;
-    padding-top: 12rem;
-    gap: 0.6rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #964a07;
-   }
-   .hero-left p {
-       width: 100%;
-       margin-left: 0.4rem;
-   }
-   .hero-right {
-       width: 100%;
-       height: 50vh;
-   }
-   .author-img-sec {
-    width: 20rem;
-    height: 22rem;
-    top: 3rem;
-    left: 4rem;
-   }
-   .menu {
-    width: 55%;
-   }
-   .close{
-    right: 20%;
-   }
-
-}
-/* Large mobile (481–767px) */
-@media (min-width: 481px) and (max-width: 767px) { 
-     .nav-tag {
-        display: none;
-     }
-    .hero-sec {
-        width: 100%;
-        height: auto;
-    }
-    .hero-left {
-    width: 60%;
-    height: 100%;
-    padding-left: 2rem;
-    padding-top: 11rem;
-    gap: 0.6rem;
-   }
-   .hero-left p {
-       width: 100%;
-       margin-left: 0.4rem;
-   }
-   .hero-right {
-       width: 40%;
-       height: 100vh;
-   }
-       .author-img-sec {
-        width: 20rem;
-        height: 20rem;
-        left: -2rem;
-        position: absolute;
-     }
-   .menu {
-    width: 40%;
-   }
-   .close{
-    right: 20%;
-   }
-   .title {
-    font-size: 2rem;
-   }
-   .author-name {
-    font-size: 2.5rem;
-   }
-   .hero-left p, .sub-text {
-    font-size: 20px;
-   }
-
-}
-/* Tablets portrait (768–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .hero-left {
-        width: 60%;
-    }
-    .hero-right {
-        width: 40%;
-    }
-    .author-img-sec {
-        left: 0.1rem;
-    }
-    .hero-left p {
-        margin-left: 1.5rem;
-    }
-
-}
+frame 
+https://i.pinimg.com/736x/94/97/d9/9497d9cb35963cf178dc7e0e94965d3b.jpg
