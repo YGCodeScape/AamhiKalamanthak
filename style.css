@@ -21,6 +21,14 @@ html {
  ::-webkit-scrollbar-thumb {
   background: #bc6c25; 
 }
+.cursor {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: rgba(233, 78, 212, 0.267);
+    transform: translate(-50%, -50%) scale(0);
+}
 
 header {
     position: fixed;
@@ -236,7 +244,6 @@ nav {
 }
 /*------------poem sections--------- */
 .poem-container {
-    border: 2px solid red;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -247,7 +254,6 @@ nav {
     margin: 0 6rem;
 }
 .featured-poem-sec {
-    border: 2px solid green;
     width: 40%;
     height: auto;
     display: flex;
@@ -284,14 +290,15 @@ nav {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    background: url(https://i.pinimg.com/736x/94/97/d9/9497d9cb35963cf178dc7e0e94965d3b.jpg);
+    background: url(https://i.pinimg.com/736x/fe/d9/51/fed9517c51b6c39480fac39db0b24064.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
 }
-.poem-title {
-    color: #540b0e;
+.f-poem-title {
+    color:#c2185b;
+    text-shadow: 2px 2px 8px #fac2ecf6, 0 1px 0 #fdb5ff5d;
     font-size: 2rem;
     font-family: "Kalam", cursive;
     font-weight: 500;
@@ -302,7 +309,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffe6a7;
+    color: #c2185b;
+    text-shadow: 2px 2px 8px #fddcf8f6, 0 1px 0 #fad3f85d;
     font-size: 1.5rem;
     text-align: center;
     line-height: 1.8;
@@ -324,7 +332,65 @@ nav {
 
 .latest-poem-sec {
     width: 60%;
-    border: 2px solid blue;
+    height: auto;
+    margin: 20px auto;
+  display:grid;
+  justify-content: center;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 80px;
+  grid-row-gap: 10px;
+}
+.poem-frame {
+    width: 15vw;
+    height: 45vh;
+    border-radius:10px;
+    background: url(https://i.pinimg.com/736x/ef/0a/f3/ef0af38eb5fb338214e28f22e55eb5c0.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.poem-holder {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.read-more {
+    display: block;
+    width: 10vw;
+    height: 6vh;
+    color: rgb(79, 111, 255);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    background: transparent;
+    text-align: center;
+    border: 2px solid rgb(59, 255, 229);
+    border-radius: 6px;
+    /* margin-bottom: 2rem; */
+
+}
+.poem-title {
+    color:#f09916;
+    text-shadow: 2px 2px 8px #fae4c2f6, 0 1px 0 #ffd3b55d;
+    font-size: 1.3rem;
+    font-family: "Kalam", cursive;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1rem;
+}
+.poem-content {
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1867c2;
+    text-shadow: 2px 2px 8px #dcfdfdf6, 0 1px 0 #d3ecfa5d;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 2;
+    margin: 2rem 0 0 0 ;
 }
 /*-----------------media query--- */
 
