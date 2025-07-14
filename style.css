@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
     margin: 0;
@@ -316,7 +317,8 @@ nav {
     line-height: 1.8;
 }
 .f-btn {
-    display: block;
+    display: inline-block;
+    position: relative;
     width: 10vw;
     height: 6vh;
     color: white;
@@ -328,6 +330,8 @@ nav {
     border: 2px solid rgb(252, 252, 252);
     border-radius: 6px;
     margin-bottom: 1rem;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .latest-poem-sec {
@@ -345,7 +349,7 @@ nav {
     width: 15vw;
     height: 45vh;
     border-radius:10px;
-    background: url(https://i.pinimg.com/736x/ef/0a/f3/ef0af38eb5fb338214e28f22e55eb5c0.jpg);
+    background: url(https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -357,23 +361,25 @@ nav {
     align-items: center;
 }
 .read-more {
-    display: block;
+    display: inline-block;
+    position: relative;
     width: 10vw;
     height: 6vh;
-    color: rgb(79, 111, 255);
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 500;
     font-family: "Outfit", sans-serif;
     background: transparent;
     text-align: center;
-    border: 2px solid rgb(59, 255, 229);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 6px;
-    /* margin-bottom: 2rem; */
-
+    margin-top:2rem;
+    cursor: pointer;
+    overflow: hidden;   
 }
 .poem-title {
-    color:#f09916;
-    text-shadow: 2px 2px 8px #fae4c2f6, 0 1px 0 #ffd3b55d;
+    color:#ffffff;
+    text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
     font-size: 1.3rem;
     font-family: "Kalam", cursive;
     font-weight: 500;
@@ -385,13 +391,83 @@ nav {
      display: flex;
     flex-direction: column;
     align-items: center;
-    color: #1867c2;
-    text-shadow: 2px 2px 8px #dcfdfdf6, 0 1px 0 #d3ecfa5d;
+    color: #752f06;
+    text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
     font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     line-height: 2;
-    margin: 2rem 0 0 0 ;
+    margin: 1rem 0 0 0;
 }
+/* --button  */
+button::before,
+button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.button--calypso span {
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.button--calypso:hover span {
+	animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+@keyframes MoveScaleUpInitial {
+	to {
+		transform: translate3d(0,-105%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleUpEnd {
+	from {
+		transform: translate3d(0,100%,0) scale3d(1,2,1);
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+.button--calypso::before {
+	content: '';
+	background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 225));
+	width: 120%;
+	height: 0;
+	padding-bottom: 120%;
+	top: -110%;
+	left: -10%;
+	border-radius: 50%;
+	transform: translate3d(0,68%,0) scale3d(0,0,0);
+}
+
+.button--calypso:hover::before {
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso::after {
+	content: '';
+	background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 249));
+	transform: translate3d(0,-100%,0);
+	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso:hover::after {
+	transform: translate3d(0,0,0);
+	transition-duration: 0.05s;
+	transition-delay: 0.4s;
+	transition-timing-function: linear;
+}
+
 /*-----------------media query--- */
 
 /* Small mobile (321–480px) */

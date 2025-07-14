@@ -84,25 +84,25 @@ menuItems.forEach(item => {
 
 
 // cursor script
-function pageCursor() {
-    document.addEventListener("mousemove", function(para) {
-        gsap.to(".cursor", {
-            left: para.x,
-            top: para.y,
-        })
-    })
-    document.querySelector(".poem-container").addEventListener
-        ("mouseenter", function() {
-          gsap.to(".cursor",{
-            transform: "translate(-50%, -50%) scale(1)",
-        })
-    })
-    document.querySelector(".poem-container").addEventListener
-        ("mouseleave", function() {
-          gsap.to(".cursor",{
-            transform: "translate(-50%, -50%)",
-            scale: 0,
-        })
-    })
-}
+// function pageCursor() {
+//     document.addEventListener("mousemove", function(para) {
+//         gsap.to(".cursor", {
+//             left: para.x,
+//             top: para.y,
+//         })
+//     })
+//     document.querySelector(".poem-container").addEventListener
+//         ("mouseenter", function() {
+//           gsap.to(".cursor",{
+//             transform: "translate(-50%, -50%) scale(1)",
+//         })
+//     })
+//     document.querySelector(".poem-container").addEventListener
+//         ("mouseleave", function() {
+//           gsap.to(".cursor",{
+//             transform: "translate(-50%, -50%)",
+//             scale: 0,
+//         })
+//     })
+// }
 // pageCursor();
