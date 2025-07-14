@@ -263,15 +263,6 @@ nav {
     justify-content: center;
     gap: 8vh;
 }
-/* .f-poem-frame {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-} */
 .f-p-text {
     font-size: 2rem;
     font-family: "Comic Relief", system-ui;
@@ -281,7 +272,6 @@ nav {
     margin-right: 6rem;
 }
 .f-poem-hold {
-    /* border: 2px solid red; */
     border-radius: 2rem;
     width: 25vw;
     height: 80vh;
@@ -522,6 +512,11 @@ button::after {
     }
     .sub-text {
        font-size: 18px;
+    }
+
+    .poem-container {
+        width: 100%;
+        height: 80vh;
     }
 
 }

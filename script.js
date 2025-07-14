@@ -18,18 +18,30 @@ gsap.to(".nav-tag ", {
     }
 })
 
-gsap.to(".word-mark img", {
-    width: "100px",
-    height: "100px",
-    x: "-20px",
-    duration: 0.1,
-    scrollTrigger : {
+
+function wordMark() {
+    ScrollTrigger.matchMedia({
+
+  // Default screens — allow animation
+  "(min-width: 481px)": function () {
+    gsap.to(".word-mark img", {
+      width: "100px",
+      height: "100px",
+      x: "-20px",
+      duration: 0.1,
+      scrollTrigger: {
         trigger: ".hero-sec",
         start: "bottom bottom",
         scrub: true,
         // markers: true
-    }
-})
+      }
+    });
+  },
+
+  // Small screens — skip the animation
+  "(max-width: 480px)": function () {
+  }
+});
 
 // Check if the screen width is 480px or less
 if (window.matchMedia("(max-width: 480px)").matches) {
@@ -46,9 +58,11 @@ if (window.matchMedia("(max-width: 480px)").matches) {
     }
   });
 }
+}
+wordMark();
 
-
-tl.from(".menu", {
+function menuTlAnimation() {
+    tl.from(".menu", {
     right: "-100%",
     duration: 0.6,
 })
@@ -81,6 +95,8 @@ menuItems.forEach(item => {
   item.addEventListener("click", () => tl.reverse());
 });
 
+}
+menuTlAnimation();
 
 
 // cursor script

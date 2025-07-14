@@ -31,66 +31,6 @@ dark svg background
     height: 140px;
 }
 ----------------
-/* Container styling */
-.poem-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 40px;
-  justify-content: center;
-  background-color: #fefefe;
-}
-
-/* Featured Poem */
-.featured-poem {
-  flex: 1 1 300px;
-  max-width: 400px;
-  background-color: #fff4e6;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.f-poem-frame {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.f-poem-hold .poem-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #b2531b;
-}
-
-.f-poem-hold .poem-content {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-.f-poem-hold .read-more {
-  margin-top: 10px;
-  background-color: #b2531b;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.f-poem-hold .read-more:hover {
-  background-color: #9e3d0f;
-}
-
-/* Latest Poems Container */
-.latest-poems {
-  flex: 2 1 600px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
 
 /* Each Poem Box */
 .poem-frame {
@@ -105,32 +45,21 @@ dark svg background
   transform: translateY(-4px);
 }
 
-.poem-hold .poem-title {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #c2185b;
-}
-
-.poem-hold .poem-content {
-  font-size: 0.95rem;
-  color: #333;
-  margin: 8px 0;
-  line-height: 1.4;
-}
-
-.poem-hold .read-more {
-  background-color: #c2185b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.poem-hold .read-more:hover {
-  background-color: #a5114a;
-}
-
+// gsap.to(".word-mark img", {
+//     width: "100px",
+//     height: "100px",
+//     x: "-20px",
+//     duration: 0.1,
+//     scrollTrigger : {
+//         trigger: ".hero-sec",
+//         start: "bottom bottom",
+//         scrub: true,
+//         // markers: true
+//     }
+// })
+-------
+    color: #752f06;
+    text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
 ----------------------------------
 frame 
 https://i.pinimg.com/736x/94/97/d9/9497d9cb35963cf178dc7e0e94965d3b.jpg
