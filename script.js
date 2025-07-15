@@ -122,3 +122,40 @@ menuTlAnimation();
 //     })
 // }
 // pageCursor();
+
+
+
+const modal = document.getElementById("poemModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalContent = document.getElementById("modalContent");
+const closeBtn = document.getElementById("closeModal");
+
+// Add click event to all read-more buttons
+document.querySelectorAll(".read-more").forEach(button => {
+  button.addEventListener("click", function () {
+    const poemCard = this.closest(".poem-holder") || this.closest(".f-poem-hold");
+
+    const title = poemCard.querySelector(".PoemTitle").innerText;
+    const content = poemCard.querySelector(".PoemContent").innerText;
+
+    modalTitle.innerText = title;
+    modalContent.innerText = content; 
+
+    modal.style.display = "flex";
+    document.body.classList.add("modal-open");
+  });
+});
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+});
+
+// Close on click outside modal content
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+});

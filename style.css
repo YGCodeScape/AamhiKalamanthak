@@ -302,31 +302,17 @@ nav {
     margin-top: 1.2rem;
 }
 .f-poem-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 1rem;
     color: #c2185b;
     text-shadow: 2px 2px 8px #fddcf8f6, 0 1px 0 #fad3f85d;
     font-size: 1.5rem;
     text-align: center;
     line-height: 1.8;
-}
-.f-btn {
-    display: inline-block;
-    position: relative;
-    width: 10vw;
-    height: 6vh;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: "Outfit", sans-serif;
-    background: transparent;
-    text-align: center;
-    border: 2px solid rgb(252, 252, 252);
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    cursor: pointer;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
 }
 
 .latest-poem-sec {
@@ -389,9 +375,6 @@ nav {
 }
 .poem-content {
     width: 100%;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
     color: #752f06;
     text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
     font-size: 0.8rem;
@@ -400,6 +383,11 @@ nav {
     text-align: center;
     line-height: 2;
     margin: 1rem 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 /* --button  */
 button::before,
@@ -471,6 +459,8 @@ button::after {
 .read-all-d {
     width: 100%;
     height: 10vh;
+    display: flex;
+    justify-content: flex-end;
 }
 .read-all-btn {
     display: inline-block;
@@ -482,7 +472,6 @@ button::after {
     border: none;
     margin-right: 23rem;
     cursor: pointer;
-    float: right;
     overflow: hidden;
 }
 .read-all-btn:hover {
@@ -513,6 +502,73 @@ button::after {
 
 .button--mimas:hover::before {
 	transform: translate3d(100%,0,0);
+}
+/*------poem overlay */
+/* Modal background */
+.poem-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 35vw;
+  height: 90vh;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-content h2 {
+    color:#f87924d7;
+    text-shadow: 2px 2px 8px #f5d776, 0 2px 0 #f5be28d7;
+    font-size: 2rem;
+    font-family: "Kalam", cursive;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 1rem;
+}
+.modal-content p {
+    width: 100%;
+    color: #752f06;
+    text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    line-height: 2;
+    margin: 1rem 0 0 0;
+}
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
 }
 /*-----------------media query--- */
 
@@ -616,6 +672,9 @@ button::after {
         width: 50vw;
         margin-right: 6rem;
     }
+     .poem-frame:hover {
+      transform: scale(1);
+    }
 }
 /* Large mobile (481–767px) */
 @media (min-width: 361px) and (max-width: 767px) { 
@@ -706,6 +765,9 @@ button::after {
     .read-all-btn {
         width: 45vw;
         margin-right: 6rem;
+    }
+    .poem-frame:hover {
+      transform: scale(1);
     }
 }
 /* toggle device*/
