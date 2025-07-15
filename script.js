@@ -124,7 +124,7 @@ menuTlAnimation();
 // pageCursor();
 
 
-
+// poem focus model
 const modal = document.getElementById("poemModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalContent = document.getElementById("modalContent");
@@ -142,7 +142,7 @@ document.querySelectorAll(".read-more").forEach(button => {
     modalContent.innerText = content; 
 
     modal.style.display = "flex";
-    document.body.classList.add("modal-open");
+        document.body.classList.add("modal-open");
   });
 });
 
