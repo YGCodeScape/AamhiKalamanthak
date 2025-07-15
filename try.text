@@ -74,3 +74,16 @@ final https://i.pinimg.com/1200x/c3/5b/c5/c35bc50dc43298260e5d470def4259fb.jpg
    poem frame background: url(https://i.pinimg.com/736x/07/51/33/075133cb8708112c27629ad5102a996d.jpg);
             https://i.pinimg.com/736x/60/87/ac/6087ace3d74821933ec4ec4de6d13c04.jpg
             https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg
+
+--------------------
+read more final 
+	before /* background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 225)); */
+  after 	/* background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 249)); */
+
+------------------------------------
+background: #530246;
+linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 249));
+------
+test read more
+border: #bc6c25;
+background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
