@@ -252,7 +252,7 @@ nav {
     flex-direction: row;
 }
 .poem-sec {
-    margin: 0 6rem;
+    margin: 0;
 }
 .featured-poem-sec {
     width: 40%;
@@ -330,14 +330,14 @@ nav {
     margin: 20px auto;
   display:grid;
   justify-content: center;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 230px 230px;
   grid-row: auto auto;
   grid-column-gap: 80px;
   grid-row-gap: 10px;
 }
 .poem-frame {
-    width: 15vw;
-    height: 45vh;
+    width: 100%;
+    height: 100%;
     border-radius:10px;
     background: url(https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
     background-size: cover;
@@ -513,12 +513,46 @@ button::after {
     .sub-text {
        font-size: 18px;
     }
-
+       .poem-sec {
+        margin: 0;
+   }
     .poem-container {
-        width: 100%;
         height: 80vh;
+        flex-direction: column;
+        position: relative;
+        padding-top: 10rem;
     }
-
+    .featured-poem-sec {
+        width: 100%;
+        gap: 3rem;
+    }
+     .latest-poem-sec {
+        width: 100%;
+        grid-column-gap: 30px;
+        grid-template-columns: 90%;
+    }
+    .f-poem-hold {
+        width: 80vw;
+        height: 65vh;
+    }
+    .f-p-text {
+        margin: 0;
+    }
+    .f-btn {
+        width: 45vw;
+        font-size: 1.8rem;
+    }
+    .poem-frame {
+        width: 100%;
+        height: 100%;
+    }
+    .read-more {
+        width: 35vw;
+        height: 5vh;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 0.6rem;
+    }
 }
 /* Large mobile (481–767px) */
 @media (min-width: 361px) and (max-width: 767px) { 
@@ -563,8 +597,46 @@ button::after {
    .close{
     right: 18%;
    }
-   
-
+   .poem-sec {
+    margin: 0;
+   }
+    .poem-container {
+        height: 80vh;
+        flex-direction: column;
+        position: relative;
+        padding-top: 10rem;
+    }
+    .featured-poem-sec {
+        width: 100%;
+        gap: 3rem;
+    }
+     .latest-poem-sec {
+        width: 100%;
+        grid-column-gap: 30px;
+        grid-template-columns: 90%;
+    }
+    .f-poem-hold {
+        width: 80vw;
+        height: 60vh;
+    }
+    .f-p-text {
+        margin: 0;
+    }
+    .f-btn {
+        width: 45vw;
+        font-size: 1.8rem;
+    }
+    .poem-frame {
+        width: 100%;
+        height: 100%;
+    }
+    .read-more {
+        width: 35vw;
+        height: 5vh;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 0.6rem;
+    }
 }
 /* toggle device*/
 @media (min-width: 768px) and (max-width: 920px) {
@@ -573,6 +645,9 @@ button::after {
     }
     .word-mark {
      width: 200px;   
+    }
+    .menu {
+        width: 35%;
     }
     .hero-sec {
         height: 90vh;
@@ -606,6 +681,29 @@ button::after {
         margin-left: 1.5rem;
     }
 
+    .poem-sec {
+        margin: 0;
+    }
+    .featured-poem-sec {
+        width: 40%;
+    }
+    .f-poem-hold {
+        width: 35vw;
+    }
+    .latest-poem-sec {
+        width: 60%;
+        grid-column-gap: 20px;
+        grid-template-columns: 220px 220px;
+    }
+    .f-p-text {
+        margin: 0;
+    }
+    .poem-frame {
+        width: 100%;
+    }
+    .read-more {
+        width: 16vw;
+    }
 }
 /* device nest hub */
 @media (min-width: 921px) and (max-width: 1024px) {
@@ -620,5 +718,30 @@ button::after {
     }
     .hero-left p {
         margin-left: 1.5rem;
+    }
+
+ 
+    .poem-sec {
+        margin: 0;
+    }
+    .featured-poem-sec {
+        width: 40%;
+    }
+    .f-poem-hold {
+        width: 35vw;
+    }
+    .latest-poem-sec {
+        width: 60%;
+        grid-column-gap: 20px;
+        grid-template-columns: 220px 220px;
+    }
+    .f-p-text {
+        margin: 0;
+    }
+    .poem-frame {
+        width: 100%;
+    }
+    .read-more {
+        width: 16vw;
     }
 }
