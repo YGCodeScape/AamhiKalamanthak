@@ -16,3 +16,27 @@ poem frame background:
 border: #bc6c25;
 background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
 ------------
+.search-d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.search-d i {
+    position: absolute;
+    left: 0.4rem;
+    top: 0.7rem;
+    font-size: 25px;
+    color: rgba(255, 0, 212, 0.959);
+}
+.search-d input {
+    width: 20vw;
+    height: 8vh;
+    padding: 1rem 1.2rem 1rem 2rem;
+    border-radius: 1rem;
+    border: 2px solid rgba(99, 10, 84, 0.856);
+    outline: none;
+    font-size: 1.2rem;
+    color: #540b0e;
+    background: transparent;
+}

@@ -576,7 +576,7 @@ body.modal-open {
 }
 /*-----------------media query--- */
 
-/* Small mobile (321–480px) */
+/* Small mobile */
 @media (max-width: 360px) {
     .word-mark {
         width: 50vw;
@@ -689,7 +689,7 @@ body.modal-open {
         font-size: 0.8rem;
     }
 }
-/* Large mobile (481–767px) */
+/* Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
      .word-mark {
         width: 50vw;
