@@ -521,7 +521,10 @@ button::after {
 
 /* Modal box */
 .modal-content {
-  background: #fff;
+  background: url( https://i.pinimg.com/1200x/c3/5b/c5/c35bc50dc43298260e5d470def4259fb.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 30px;
   border-radius: 12px;
   width: 35vw;
@@ -782,6 +785,7 @@ body.modal-open {
 
     .modal-content {
         width: 100%;
+        height: 80vh;
     }
     .modal-content h2 {
         font-size: 2rem;

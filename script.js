@@ -125,6 +125,8 @@ menuTlAnimation();
 
 
 // poem focus model
+
+function poemModelFocus() {
 const modal = document.getElementById("poemModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalContent = document.getElementById("modalContent");
@@ -159,3 +161,5 @@ window.addEventListener("click", (e) => {
     document.body.classList.remove("modal-open");
   }
 });
+}
+poemModelFocus();
