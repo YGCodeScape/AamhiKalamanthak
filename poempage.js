@@ -19,18 +19,62 @@ function scrollToTop() {
 const searchIcon = document.getElementById('search-icon');
 const searchBar = document.getElementById('searchInput');
 const searchContainer = document.getElementById('search-container');
+const logo = document.getElementById('logo');
 
 searchIcon.addEventListener('click', function(e) {
   e.stopPropagation();
   searchBar.classList.add('active');
   searchBar.focus();
   searchIcon.style.opacity = '0';
+   if(window.innerWidth <= 768) {
+      logo.classList.add('hide-logo'); 
+    }
 });
 
 document.addEventListener('click', function(e) {
   if (!searchContainer.contains(e.target)) {
        searchBar.classList.remove('active');
        searchBar.blur();
-       searchIcon.style.opacity = '1'
+       searchIcon.style.opacity = '1';
+       logo.classList.remove('hide-logo');
   }
-});;
+});
+
+// poem focus model
+function poemModelFocus() {
+const modal = document.getElementById("poemModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalContent = document.getElementById("modalContent");
+const closeBtn = document.getElementById("closeModal");
+
+// Add click event to all read-more buttons
+document.querySelectorAll(".read-more").forEach(button => {
+  button.addEventListener("click", function () {
+    const poemCard = this.closest(".poem-holder") || this.closest(".f-poem-hold");
+
+    const title = poemCard.querySelector(".PoemTitle").innerText;
+    const content = poemCard.querySelector(".PoemContent").innerText;
+
+    modalTitle.innerText = title;
+    modalContent.innerText = content; 
+
+    modal.style.display = "flex";
+        document.body.classList.add("modal-open");
+  });
+});
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open");
+});
+
+// Close on click outside modal content
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+});
+}
+poemModelFocus();

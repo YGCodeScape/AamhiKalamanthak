@@ -125,7 +125,6 @@ menuTlAnimation();
 
 
 // poem focus model
-
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
 const modalTitle = document.getElementById("modalTitle");

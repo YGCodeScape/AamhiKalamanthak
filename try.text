@@ -3,7 +3,7 @@ featured frame
 https://i.pinimg.com/736x/fe/d9/51/fed9517c51b6c39480fac39db0b24064.jpg
 
 poem modal frame
- https://i.pinimg.com/1200x/c3/5b/c5/c35bc50dc43298260e5d470def4259fb.jpg
+https://i.pinimg.com/1200x/e6/ab/7d/e6ab7d949381454d2a0e05f3d5a6cb9a.jpg
    
 poem frame background: 
  https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg
@@ -12,7 +12,18 @@ poem frame background:
 -------------------- 
  background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 249)); */
 ------------------------------------
+all poem page 
+poem frame
+https://i.pinimg.com/736x/1a/d5/68/1ad568e4e7ae50a5afadca2be758b5bd.jpg
+poem holder background
+https://i.pinimg.com/736x/eb/a7/e9/eba7e9aee93b00c4065363e1fa630b4d.jpg
 ------
+   pt-- color: #ff7525;
+    text-shadow: 2px 2px 8px #ffffffad, 0 1px 0 #fffdf8d8;
+    poem-title
+    color:#ffffff;
+    text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
+
 border: #bc6c25;
 background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
 ------------
@@ -40,3 +51,16 @@ background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
     color: #540b0e;
     background: transparent;
 }
+------------------
+// // Check if the screen width is 480px or less
+// if (window.matchMedia("(max-width: 480px)").matches) {
+//     searchIcon.addEventListener('click', function(e) {
+//       gsap.to(".logo", {
+//           duration: 0.3,
+//           x : -200,
+//       });
+//    })
+// }
+
+----------------
+    grid-template-columns: repeat(5, 200px);
