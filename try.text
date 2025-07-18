@@ -64,3 +64,4 @@ background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
 
 ----------------
     grid-template-columns: repeat(5, 200px);
+    box-shadow: 1px 3px 8px 0 rgba(44, 2, 36, 0.486);

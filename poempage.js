@@ -91,10 +91,9 @@ poemModelFocus();
 
     poems.forEach((poem) => {
       const title = poem.querySelector(".poem-title").innerText.toLowerCase();
-      const text = poem.querySelector(".PoemContent").innerText.toLowerCase();
 
       // Check if query is in title or poem text
-      if (title.includes(query) || text.includes(query)) {
+      if (title.includes(query)) {
           poem.style.display = "block";
       } else {
          poem.style.display = "none";

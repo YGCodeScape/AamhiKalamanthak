@@ -131,8 +131,8 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1);
-    transition: 0.3s ease-in-out;
+    box-shadow:1px 3px 8px 0 rgba(44, 2, 36, 0.39);
+    border: 1px solid rgba(129, 129, 129, 0.678);
 }
 .poem-holder {
     text-align: center;
@@ -222,7 +222,7 @@ button::after {
 
 .button--calypso::before {
 	content: '';
-    background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
+    background: linear-gradient(to right, #ff7525,#fa9c66, #fc5f05);
 	width: 120%;
 	height: 0;
 	padding-bottom: 120%;
@@ -239,7 +239,7 @@ button::after {
 
 .button--calypso::after {
 	content: '';
-    background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
+    background: linear-gradient(to right, #ff7525,#fa9c66, #fc5f05);
 	transform: translate3d(0,-100%,0);
 	transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
@@ -361,6 +361,11 @@ body.modal-open {
         height: 5vh;
         font-size: 1.4rem;
         margin-top: 1rem;
+        background: linear-gradient(to right, #ff7525,#fa9c66, #fc5f05);
+    }
+    .read-more::after,
+    .read-more::before {
+        display: none;
     }
     .poem-content {
         margin: 3rem 0;
@@ -404,6 +409,11 @@ body.modal-open {
         height: 5vh;
         font-size: 1.4rem;
         margin-top: 1rem;
+        background: linear-gradient(to right, #ff7525,#fa9c66, #fc5f05);
+    }
+    .read-more::after,
+    .read-more::before {
+        display: none;
     }
     .poem-content {
         margin: 3rem 0;
