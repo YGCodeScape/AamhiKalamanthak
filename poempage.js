@@ -16,29 +16,32 @@ function scrollToTop() {
   window.scrollTo({top: 0, behavior: "smooth"});
 }
 
-const searchIcon = document.getElementById('search-icon');
-const searchBar = document.getElementById('searchInput');
-const searchContainer = document.getElementById('search-container');
-const logo = document.getElementById('logo');
+function searchBar() {
+    const searchIcon = document.getElementById('search-icon');
+    const searchBar = document.getElementById('searchInput');
+    const searchContainer = document.getElementById('search-container');
+    const logo = document.getElementById('logo');
 
-searchIcon.addEventListener('click', function(e) {
-  e.stopPropagation();
-  searchBar.classList.add('active');
-  searchBar.focus();
-  searchIcon.style.opacity = '0';
-   if(window.innerWidth <= 768) {
-      logo.classList.add('hide-logo'); 
-    }
-});
+    searchIcon.addEventListener('click', function(e) {
+         e.stopPropagation();
+         searchBar.classList.add('active');
+         searchBar.focus();
+         searchIcon.style.opacity = '0';
+         if(window.innerWidth <= 768) {
+             logo.classList.add('hide-logo'); 
+          }
+     });
 
-document.addEventListener('click', function(e) {
-  if (!searchContainer.contains(e.target)) {
-       searchBar.classList.remove('active');
-       searchBar.blur();
-       searchIcon.style.opacity = '1';
-       logo.classList.remove('hide-logo');
-  }
-});
+    document.addEventListener('click', function(e) {
+       if (!searchContainer.contains(e.target)) {
+             searchBar.classList.remove('active');
+             searchBar.blur();
+             searchIcon.style.opacity = '1';
+             logo.classList.remove('hide-logo');
+        }
+    });
+}
+searchBar();
 
 // poem focus model
 function poemModelFocus() {
@@ -78,3 +81,23 @@ window.addEventListener("click", (e) => {
 });
 }
 poemModelFocus();
+
+
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const poems = document.querySelectorAll(".poem-frame");
+
+    poems.forEach((poem) => {
+      const title = poem.querySelector(".poem-title").innerText.toLowerCase();
+      const text = poem.querySelector(".PoemContent").innerText.toLowerCase();
+
+      // Check if query is in title or poem text
+      if (title.includes(query) || text.includes(query)) {
+          poem.style.display = "block";
+      } else {
+         poem.style.display = "none";
+      }
+    });
+  });
