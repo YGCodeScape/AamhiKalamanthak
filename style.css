@@ -576,18 +576,79 @@ body.modal-open {
 }
 
 /*-----------books section */
+.book-page {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 .book-wrapper {
-    margin: 3rem 6rem 0 6rem;
-    border: 2px solid red;
+    width: 100%;
 }
 .books-frame {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.book-d {
+    width: 18vw;
+    height: 50vh;
+    border: 2px solid rgba(201, 199, 199, 0.918);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #888787d3;
+    padding: 0.4rem;
 }
 .book-d img{
-    width: 200px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.book-overlay {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #c77dff 58%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+}
+.book-title {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Sansation", sans-serif;
+    width: 60%;
+    margin-bottom: 0.2rem;
+    margin-top: 40%;
+    letter-spacing: 2px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+.book-content {
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: "Comic Relief", system-ui;
+    width: 90%;
+    margin: 0.4rem 0;
+    color: #ffffff;
+}
+.buy-now-btn a{
+    text-decoration: none;
+}
+.book-d:hover img{
+    transform: scale(1.2);
+}
+.book-d:hover .book-overlay {
+    height: 100%;
 }
 
 /*-----------------media query--- */

@@ -18,50 +18,15 @@ https://i.pinimg.com/736x/1a/d5/68/1ad568e4e7ae50a5afadca2be758b5bd.jpg
 poem holder background
 https://i.pinimg.com/736x/eb/a7/e9/eba7e9aee93b00c4065363e1fa630b4d.jpg
 ------
-   pt-- color: #ff7525;
-    text-shadow: 2px 2px 8px #ffffffad, 0 1px 0 #fffdf8d8;
-    poem-title
-    color:#ffffff;
-    text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
 
-border: #bc6c25;
-background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
-------------
-.search-d {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.search-d i {
-    position: absolute;
-    left: 0.4rem;
-    top: 0.7rem;
-    font-size: 25px;
-    color: rgba(255, 0, 212, 0.959);
-}
-.search-d input {
-    width: 20vw;
-    height: 8vh;
-    padding: 1rem 1.2rem 1rem 2rem;
-    border-radius: 1rem;
-    border: 2px solid rgba(99, 10, 84, 0.856);
-    outline: none;
-    font-size: 1.2rem;
-    color: #540b0e;
-    background: transparent;
-}
 ------------------
-// // Check if the screen width is 480px or less
-// if (window.matchMedia("(max-width: 480px)").matches) {
-//     searchIcon.addEventListener('click', function(e) {
-//       gsap.to(".logo", {
-//           duration: 0.3,
-//           x : -200,
-//       });
-//    })
-// }
-
+.books-frame {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-gap: 20px; */
+    justify-items: center;
+    align-items: center;
+}
 ----------------
     grid-template-columns: repeat(5, 200px);
     box-shadow: 1px 3px 8px 0 rgba(44, 2, 36, 0.486);
