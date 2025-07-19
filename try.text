@@ -30,3 +30,106 @@ https://i.pinimg.com/736x/eb/a7/e9/eba7e9aee93b00c4065363e1fa630b4d.jpg
 ----------------
     grid-template-columns: repeat(5, 200px);
     box-shadow: 1px 3px 8px 0 rgba(44, 2, 36, 0.486);
+
+    
+.book-page {
+    width: 100%;
+    height: 80vh;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+.book-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.arrow-i-d {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ee4a8b;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.books-frame {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    overflow-x: scroll;
+}
+.book-d {
+    width: 18vw;
+    height: 50vh;
+    /* border: 2px solid rgba(201, 199, 199, 0.918); */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #888787d3;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+.book-d img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.book-overlay {
+    height: 0;
+    width: 100%;
+    background: #c77dff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+}
+.book-title {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Sansation", sans-serif;
+    width: 60%;
+    margin-bottom: 0.2rem;
+    margin-top: 4%;
+    letter-spacing: 2px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+.book-content {
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: "Comic Relief", system-ui;
+    width: 90%;
+    margin: 0.4rem 0;
+    color: #ffffff;
+}
+.buy-now-btn a{
+    text-decoration: none;
+}
+.book-d:hover img{
+    transform: scale(1.2);
+}
+.book-d:hover .book-overlay {
+    height: 50%;
+}

@@ -577,12 +577,48 @@ body.modal-open {
 
 /*-----------books section */
 .book-page {
-    margin-top: 3rem;
+    width: 100%;
+    height: 80vh;
+    margin-top: 4rem;
     margin-bottom: 3rem;
+}
+.book-page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-left: 13rem;
+}
+.book-page h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #e76f05;
+    font-family: "Outfit", sans-serif;
+    text-transform: capitalize;
 }
 .book-wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
 }
+/* .arrow-i-d {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #ee4a8b;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+} */
 .books-frame {
     display: flex;
     flex-direction: row;
@@ -593,12 +629,13 @@ body.modal-open {
 .book-d {
     width: 18vw;
     height: 50vh;
-    border: 2px solid rgba(201, 199, 199, 0.918);
+    /* border: 2px solid rgba(201, 199, 199, 0.918); */
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     box-shadow: 5px 5px 15px #888787d3;
     padding: 0.4rem;
+    cursor: pointer;
 }
 .book-d img{
     width: 100%;
@@ -610,10 +647,12 @@ body.modal-open {
 .book-overlay {
     height: 0;
     width: 100%;
-    background: linear-gradient(transparent, #c77dff 58%);
+    background: #c77dff;
     position: absolute;
     left: 0;
     bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -626,29 +665,45 @@ body.modal-open {
     font-size: 1rem;
     font-weight: 600;
     font-family: "Sansation", sans-serif;
-    width: 60%;
+    width: 80%;
     margin-bottom: 0.2rem;
-    margin-top: 40%;
+    margin-top: 4%;
     letter-spacing: 2px;
     text-align: center;
-    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    color: #3c096c;
 }
 .book-content {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
     font-family: "Comic Relief", system-ui;
     width: 90%;
     margin: 0.4rem 0;
-    color: #ffffff;
+    color: #f2ebfb;
+    display: flex;
+    flex-direction: column;
+}
+.buy-now-btn {
+    width: 9vw;
+    height:6vh;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: #7b2cbf;
+    cursor: pointer;
 }
 .buy-now-btn a{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Comic Relief", system-ui;
+    color: #f4effa;
     text-decoration: none;
 }
 .book-d:hover img{
     transform: scale(1.2);
 }
 .book-d:hover .book-overlay {
-    height: 100%;
+    height: 50%;
 }
 
 /*-----------------media query--- */
