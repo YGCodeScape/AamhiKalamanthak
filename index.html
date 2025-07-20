@@ -22,7 +22,8 @@
                 <div class="nav-hold">
                      <h4 class="nav-tag"><a href="#hero-sec">About Poet</a></h4>
                      <h4 class="nav-tag"><a href="./poemPage.html">All Poems</a></h4>
-                     <h4 class="nav-tag"><a href="#book-wrapper">See Books</a></h4>
+                     <h4 class="nav-tag"><a href="#book-page">See Books</a></h4>
+                     <h4 class="nav-tag"><a href="#review-page">Reviews</a></h4>
                      <h4 class="nav-tag"><a href="#">Contact</a></h4>
                      <i class="ri-menu-4-line menu-icon"></i>
                 </div>
@@ -30,15 +31,16 @@
                     <i class="ri-close-fill close"></i>
                     <h4 class="menu-tag"><a href="#hero-sec">About Writer</a></h4>
                     <h4 class="menu-tag"><a href="./poemPage.html">All Poems</a></h4>
-                    <h4 class="menu-tag"><a href="#book-wrapper">See Books</a></h4>
+                    <h4 class="menu-tag"><a href="#book-page">See Books</a></h4>
+                    <h4 class="menu-tag"><a href="#review-page">Reviews</a></h4>
                     <h4 class="menu-tag"><a href="#">Contact</a></h4>
-                    <h4 class="menu-tag"><a href="#">See Blogs</a></h4>
-                 </div>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="hero-sec" id="hero-sec"> 
+         <!-- hero / landing page section -->
+         <div class="hero-sec" id="hero-sec"> 
             <div class="hero-left">
                 <span class="title">कवी</span>
                  <h1 class="author-name">कु.अभय हरीचंद्र शिगवण</h1>
@@ -51,9 +53,9 @@
                      <img src="./img/Author-img.png" alt="Author img" class="author-img">
                 </div>
             </div>
-        </div>
-
-        <div class="poem-sec" id="all-poems">
+         </div>
+         <!-- poem section -->
+         <div class="poem-sec" id="all-poems">
             <div class="poem-container">
                 <div class="featured-poem-sec">
                      <h2 class="f-p-text">featured poem...</h2>
@@ -274,46 +276,125 @@
                      <p id="modalContent">Full poem will appear here...</p>
                  </div>
             </div>
+         </div>
+         <hr>
+         <!-- book section -->
+        <div class="book-page" id="book-page">
+              <div class="book-page-title">
+                  <h1>books written by author</h1>
+              </div>
+              <div class="book-wrapper">
+                 <!-- <div class="left-i-d arrow-i-d"><i class="ri-arrow-left-s-line"></i></div> -->
+                 <div class="books-frame">
+                     <div class="book-d">
+                         <img src="./img/book1.jpg" alt="">
+                         <div class="book-overlay">
+                             <h3 class="book-title">Ek hota chandra dusri ti chandni</h3>
+                             <p class="book-content"><span>Format: Kindle Edition</span><span>40 pages</span></p>
+                             <button class="buy-now-btn"><a href="https://www.amazon.ca/%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE-%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0-%E0%A4%A6%E0%A5%81%E0%A4%B8%E0%A4%B0%E0%A5%80-%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A4%A3%E0%A5%80-Marathi-ebook/dp/B0DRNNJ9YM" target="_blank" rel="noopener noreferrer">Buy Now</a></button>
+                         </div>
+                     </div>
+                     <div class="book-d">
+                         <img src="./img/book2.jpg" alt="">
+                         <div class="book-overlay">
+                             <h3 class="book-title">ORBIT OF LOVE<br>Part-1</h3>
+                             <p class="book-content"><span>Format: Kindle Edition</span><span>42 pages</span></p>
+                             <button class="buy-now-btn"><a href="https://www.amazon.com/ORBIT-LOVE-revolves-around-hearts-ebook/dp/B0DRNNPHS5" target="_blank" rel="noopener noreferrer">Buy Now</a></button>
+                         </div>
+                     </div>
+                     <div class="book-d">
+                         <img src="./img/book3.jpg" alt="">
+                         <div class="book-overlay">
+                             <h3 class="book-title">katha priyakarachi</h3>
+                             <p class="book-content"><span>Format: Kindle Edition</span><span>40 pages</span></p>
+                             <button class="buy-now-btn"><a href="#">Cooming Soon</a></button>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- <div class="right-i-d arrow-i-d"><i class="ri-arrow-right-s-line"></i></div> -->
+              </div>
+        </div>
+        <!-- user reviews section -->
+        <div class="review-page" id="review-page">
+            <h2>Reader Reviews</h2>
+            <p>what our readers are saying about the poems!</p>
+            <div class="masonry-div">
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                     <div class="review-content">
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium?</span>
+                     </div>
+                </div>
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                        <div class="review-content">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea.</span>
+                        </div>
+                </div>
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                     <div class="review-content">
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea.</span>
+                     </div>
+                </div>
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                     <div class="review-content">
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repudiandae atque, veniam dolores ipsum beatae quo quae molestiae nam corporis impedit.</span>
+                     </div>
+                </div>
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                     <div class="review-content">
+                         <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea. Lorem ipsum, dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur.</span>
+                     </div>
+                </div>
+                <div class="review-card">
+                     <div class="review-user">
+                        <img src="#" alt="">
+                        <div class="user-info">
+                            <strong>User Name</strong>
+                            <span>@username</span>
+                        </div>
+                     </div>
+                     <div class="review-content">
+                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ea.</span>
+                     </div>
+                </div>
+            </div>
         </div>
 
-                    <!-- book section -->
-             <div class="book-page">
-                <div class="book-page-title">
-                     <h1>books written by author</h1>
-                </div>
-                <div class="book-wrapper" id="book-wrapper">
-                    <!-- <div class="left-i-d arrow-i-d"><i class="ri-arrow-left-s-line"></i></div> -->
-                    <div class="books-frame">
-                        <div class="book-d">
-                            <img src="./img/book1.jpg" alt="">
-                            <div class="book-overlay">
-                                <h3 class="book-title">Ek hota chandra dusri ti chandni</h3>
-                                <p class="book-content"><span>Format: Kindle Edition</span><span>40 pages</span></p>
-                                <button class="buy-now-btn"><a href="https://www.amazon.ca/%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE-%E0%A4%9A%E0%A4%82%E0%A4%A6%E0%A5%8D%E0%A4%B0-%E0%A4%A6%E0%A5%81%E0%A4%B8%E0%A4%B0%E0%A5%80-%E0%A4%9A%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A4%A3%E0%A5%80-Marathi-ebook/dp/B0DRNNJ9YM" target="_blank" rel="noopener noreferrer">Buy Now</a></button>
-                            </div>
-                        </div>
-                         <div class="book-d">
-                             <img src="./img/book2.jpg" alt="">
-                             <div class="book-overlay">
-                                 <h3 class="book-title">ORBIT OF LOVE<br>Part-1</h3>
-                                 <p class="book-content"><span>Format: Kindle Edition</span><span>42 pages</span></p>
-                                 <button class="buy-now-btn"><a href="https://www.amazon.com/ORBIT-LOVE-revolves-around-hearts-ebook/dp/B0DRNNPHS5" target="_blank" rel="noopener noreferrer">Buy Now</a></button>
-                             </div>
-                         </div>
-                        <div class="book-d">
-                            <img src="./img/book3.jpg" alt="">
-                            <div class="book-overlay">
-                                <h3 class="book-title">katha priyakarachi</h3>
-                                <p class="book-content"><span>Format: Kindle Edition</span><span>40 pages</span></p>
-                                <button class="buy-now-btn"><a href="#">Cooming Soon</a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="right-i-d arrow-i-d"><i class="ri-arrow-right-s-line"></i></div> -->
-                </div>
-             </div>
     </main>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

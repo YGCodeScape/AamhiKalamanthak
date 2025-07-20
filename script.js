@@ -4,62 +4,6 @@ var menuItems = document.querySelectorAll(".menu-tag a")
 
 var tl = gsap.timeline();
 
-gsap.to(".nav-tag ", {
-    yPercent: -100,
-    opacity: 0,
-    duration: 0.2,
-    stagger: 0.05,
-    scrollTrigger : {
-        trigger: "header",
-        start: "top top",
-        end: "top -10%",
-        scrub: true,
-        // markers: true
-    }
-})
-
-
-function wordMark() {
-    ScrollTrigger.matchMedia({
-
-  // Default screens — allow animation
-  "(min-width: 481px)": function () {
-    gsap.to(".word-mark img", {
-      width: "100px",
-      height: "100px",
-      x: "-20px",
-      duration: 0.1,
-      scrollTrigger: {
-        trigger: ".hero-sec",
-        start: "bottom bottom",
-        scrub: true,
-        // markers: true
-      }
-    });
-  },
-
-  // Small screens — skip the animation
-  "(max-width: 480px)": function () {
-  }
-});
-
-// Check if the screen width is 480px or less
-if (window.matchMedia("(max-width: 480px)").matches) {
-  gsap.to("nav", {
-    duration: 0.4,
-    backgroundColor: "#fdebbcf5",
-    backdropFilter: "blur(10px)",
-    scrollTrigger: {
-      trigger: "header",
-      start: "top top",
-      end: "top -10%",
-      scrub: true,
-      // markers: true
-    }
-  });
-}
-}
-wordMark();
 
 function menuTlAnimation() {
     tl.from(".menu", {

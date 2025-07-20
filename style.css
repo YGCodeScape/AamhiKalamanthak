@@ -9,9 +9,11 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -39,6 +41,8 @@ header {
     height: auto;
     z-index: 100;
     margin: 0;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
 }
 
 nav {
@@ -108,6 +112,7 @@ nav {
     padding-left: 25px;
     border-bottom-left-radius: 50px;
 }
+
 .menu h4 {
     margin-bottom: 1.2rem;
 }
@@ -144,7 +149,7 @@ nav {
     right: 25%;
 }
 .menu-icon {
-    display: inline-block;
+    display: none;
     font-size: 2.4rem;
     font-weight: 800;
     color: #bc6c25;
@@ -253,6 +258,7 @@ nav {
 }
 .poem-sec {
     margin: 0 0 0 3rem;
+    padding-bottom: 4rem;
 }
 .featured-poem-sec {
     width: 30%;
@@ -647,7 +653,7 @@ body.modal-open {
 .book-overlay {
     height: 0;
     width: 100%;
-    background: #c77dff;
+    background: #c77dffd6;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -664,7 +670,7 @@ body.modal-open {
 .book-title {
     font-size: 1rem;
     font-weight: 600;
-    font-family: "Sansation", sans-serif;
+    font-family: "Outfit", sans-serif;
     width: 80%;
     margin-bottom: 0.2rem;
     margin-top: 4%;
@@ -691,6 +697,12 @@ body.modal-open {
     border-radius: 8px;
     background: #7b2cbf;
     cursor: pointer;
+    transform: scale(1);
+}
+.buy-now-btn:hover {
+    background: #5f3dc4;
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 .buy-now-btn a{
     font-size: 1rem;
@@ -703,16 +715,84 @@ body.modal-open {
     transform: scale(1.2);
 }
 .book-d:hover .book-overlay {
-    height: 50%;
+    height: 55%;
 }
-
+/* review page ------------- */
+.review-page {
+    background: linear-gradient(to right, #f9f4f9, #f2faff);
+    padding:2rem 1rem;
+    width: 100%;
+    height: 90vh;
+}
+.review-page h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: #0c0b0b;
+    text-align: center;
+}
+.review-page p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    color: #0c0b0b;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.masonry-div {
+    column-count: 3;
+    column-gap: 0.4rem;
+    padding: 0 3rem;
+    margin: 0 3rem;
+}
+.review-card {
+    background: #fff;
+    display: inline-block;
+    width: 25vw;
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+.review-user {
+    display: flex;
+    gap: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.review-user img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.user-info {
+    font-size: 0.9rem;
+    font-family: "Outfit", sans-serif;
+}
+.user-info strong {
+    display: block;
+}
+.user-info span {
+    color: #888888e8;
+}
+.review-content span {
+    font-size: 0.9rem;
+    font-family: "Outfit", sans-serif;
+    color: #333;
+}
 /*-----------------media query--- */
 
 /* Small mobile */
 @media (max-width: 360px) {
+     header {
+        box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+     }
     .word-mark {
         width: 50vw;
         height: 15vh;
+    }
+    .menu-icon {
+        display: inline-block;
     }
     .nav-tag {
         display: none;
@@ -747,6 +827,9 @@ body.modal-open {
    .close{
     right: 18%;
    }
+   .poem-sec {
+    margin: 0;
+   }
    .title {
        font-size: 2rem;
     }
@@ -777,7 +860,7 @@ body.modal-open {
      .latest-poem-sec {
         width: 100%;
         grid-column-gap: 30px;
-        grid-template-columns: 90%;
+        grid-template-columns: 80%;
     }
     .f-poem-hold {
         width: 80vw;
@@ -820,12 +903,40 @@ body.modal-open {
     .modal-content p {
         font-size: 0.8rem;
     }
+
+    .book-page-title {
+       padding-left: 2rem;
+    }
+    .book-page h1 {
+        font-size: 1.8rem;
+    }
+    .books-frame {
+        flex-direction: column;
+    }
+    .book-d {
+        width: 75vw;
+    }
+    .book-content {
+        margin: 1rem 0;
+    }
+    .buy-now-btn {
+        width: 30vw;
+    }
 }
 /* Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
+    .review-page {
+        position: relative;
+    }
+     header {
+        box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+     }
      .word-mark {
         width: 50vw;
         height: 15vh;
+    }
+    .menu-icon {
+        display: inline-block;
     }
     .nav-tag {
         display: none;
@@ -871,7 +982,7 @@ body.modal-open {
         height: auto;
         flex-direction: column;
         position: relative;
-        padding-top: 10rem;
+        padding-top: 6rem;
     }
     .featured-poem-sec {
         width: 100%;
@@ -880,7 +991,7 @@ body.modal-open {
      .latest-poem-sec {
         width: 100%;
         grid-column-gap: 30px;
-        grid-template-columns: 90%;
+        grid-template-columns: 70%;
     }
     .f-poem-hold {
         width: 80vw;
@@ -924,6 +1035,29 @@ body.modal-open {
     }
     .modal-content p {
         font-size: 0.8rem;
+    }
+
+    .book-page {
+        position: inherit;
+        height: auto;
+    }
+    .book-page-title {
+       padding-left: 2rem;
+    }
+    .book-page h1 {
+        font-size: 1.8rem;
+    }
+    .books-frame {
+        flex-direction: column;
+    }
+    .book-d {
+        width: 75vw;
+    }
+    .book-content {
+        margin: 1rem 0;
+    }
+    .buy-now-btn {
+        width: 30vw;
     }
 }
 /* toggle device*/

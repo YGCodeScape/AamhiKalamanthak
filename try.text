@@ -133,3 +133,14 @@ https://i.pinimg.com/736x/eb/a7/e9/eba7e9aee93b00c4065363e1fa630b4d.jpg
 .book-d:hover .book-overlay {
     height: 50%;
 }
+
+            <div class="review-wrapper">
+                <div class="review-card">
+                    <p class="review-content">"कवी अभय शिगवण यांची कविता वाचताना एक वेगळाच अनुभव येतो. त्यांच्या शब्दांमध्ये एक गूढता आहे, जी वाचकाला विचार करण्यास प्रवृत्त करते."</p>
+                    <span class="review-author">- समीक्षक १</span>
+                </div>
+                <div class="review-card">
+                    <p class="review-content">"त्यांच्या कवितांमध्ये जीवनाची गूढता आणि सौंदर्य यांचा अद्भुत संगम आहे. वाचनानंतर मनात एक वेगळाच आनंद राहतो."</p>
+                    <span class="review-author">- समीक्षक २</span>
+                </div>
+            </div>
