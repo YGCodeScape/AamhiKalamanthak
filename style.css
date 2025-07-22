@@ -13,7 +13,7 @@ body {
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px;
+    scroll-padding-top: 110px;
 }
 
  ::-webkit-scrollbar-thumb {
@@ -273,16 +273,16 @@ nav {
     margin-left: 4rem;
 }
 .f-poem-hold {
-    border-radius: 2rem;
     width: 25vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-radius: 2rem;
     margin: 0;
     padding: 0;
-    background: url(https://i.pinimg.com/736x/fe/d9/51/fed9517c51b6c39480fac39db0b24064.jpg);
+    background: url(https://i.pinimg.com/736x/f6/2d/9d/f62d9d6e69fddc5371d313d19c145fbd.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -290,12 +290,23 @@ nav {
     transform: scale(1);
     transition: 0.3s ease-in-out;
 }
+.f-poem-hold::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fdebe23d;
+    border-radius: 2rem;
+    z-index: -2;
+}
 .f-poem-hold:hover {
     transform: scale(1.06);
 }
 .f-poem-title {
-    color:#c2185b;
-    text-shadow: 2px 2px 8px #fac2ecf6, 0 1px 0 #fdb5ff5d;
+    color:#ffffff;
+    text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
     font-size: 2rem;
     font-family: "Kalam", cursive;
     font-weight: 500;
@@ -304,9 +315,10 @@ nav {
 }
 .f-poem-content {
     margin-top: 1rem;
-    color: #c2185b;
-    text-shadow: 2px 2px 8px #fddcf8f6, 0 1px 0 #fad3f85d;
+     color: #f87924d7;
+    text-shadow: 2px 2px 8px #ffffffad, 0 1px 0 #ffffff;
     font-size: 1.5rem;
+    font-weight: 600;
     text-align: center;
     line-height: 1.8;
     overflow: hidden;
@@ -331,7 +343,7 @@ nav {
     width: 100%;
     height: 100%;
     border-radius:10px;
-    background: url(https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
+    background: url( https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -346,6 +358,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius:10px;
+    cursor: pointer;
 }
 .read-more {
     display: inline-block;
@@ -360,7 +374,7 @@ nav {
     text-align: center;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 6px;
-    margin-top:3.5rem;
+    margin-top:3rem;
     margin-bottom: 1rem;
     cursor: pointer;
     overflow: hidden;   
@@ -379,7 +393,7 @@ nav {
     color: #752f06;
     text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: "Poppins", sans-serif;
     text-align: center;
     line-height: 2;
@@ -462,6 +476,7 @@ button::after {
     height: 10vh;
     display: flex;
     justify-content: flex-end;
+    margin-top: 3rem;
 }
 .read-all-btn {
     display: inline-block;
@@ -522,7 +537,7 @@ button::after {
 
 /* Modal box */
 .modal-content {
-  background: url(https://i.pinimg.com/1200x/e6/ab/7d/e6ab7d949381454d2a0e05f3d5a6cb9a.jpg);
+  background: url(https://i.pinimg.com/736x/c6/7a/4a/c67a4ae52ca666aa38dc3be3275a2a92.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -648,7 +663,7 @@ body.modal-open {
 .book-overlay {
     height: 0;
     width: 100%;
-    background: #c77dffd6;
+    background: #f2ebfb;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -680,7 +695,7 @@ body.modal-open {
     font-family: "Comic Relief", system-ui;
     width: 90%;
     margin: 0.4rem 0;
-    color: #f2ebfb;
+    color: #c77dffd6;
     display: flex;
     flex-direction: column;
 }
@@ -715,9 +730,9 @@ body.modal-open {
 /* review page ------------- */
 .review-page {
     background: linear-gradient(to right, #f9f4f9, #f2faff);
-    padding:2rem 1rem;
+    padding: 2rem 1rem;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 }
 .review-page h2 {
     font-size: 2.5rem;
@@ -785,8 +800,35 @@ body.modal-open {
     font-family: "Outfit", sans-serif;
     color: #3d405b;
 }
-/*-----------------media query--- */
 
+.send-review-d {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin: 2rem 2rem 1rem 10rem;
+}
+.send-review-d span {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+    color: #001d3d;
+    letter-spacing: 1px;
+}
+.send-review-d a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-left: 2px solid #001d3d;
+    border-bottom: 2px solid #001d3d;
+    border-bottom-left-radius: 12px;
+}
+
+/*-----------------media query--- */
 /* Small mobile */
 @media (max-width: 360px) {
      header {
@@ -858,6 +900,9 @@ body.modal-open {
         position: relative;
         padding-top: 10rem;
     }
+    .poem-frame {
+        background: url( https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
+    }
     .featured-poem-sec {
         width: 100%;
         gap: 3rem;
@@ -901,6 +946,10 @@ body.modal-open {
     }
     .modal-content {
         width: 100%;
+        background: url(https://i.pinimg.com/1200x/e6/ab/7d/e6ab7d949381454d2a0e05f3d5a6cb9a.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .modal-content h2 {
         font-size: 2rem;
@@ -932,19 +981,25 @@ body.modal-open {
     .buy-now-btn {
         width: 30vw;
     }
-     .review-page {
+    .review-page {
         position: relative;
         height: auto;
+        padding: 2rem 0;
     }
-
     .masonry-div {
      column-count: 1;
      column-gap: 0.4rem;
-     margin: 0 2rem;
+     margin: 0;
      padding: 0;
    }
    .review-card {
-    width: 75vw;
+    width: 70vw;
+   }
+   .r-c-1,.r-c-3, .r-c-5 {
+    margin-left: 0.7rem;
+   }
+   .r-c-2, .r-c-4, .r-c-6 {
+    margin-left: 7rem;
    }
 }
 /* Large mobile */
@@ -1029,6 +1084,10 @@ body.modal-open {
         width: 100%;
         height: 100%;
     }
+    .poem-holder {
+        backdrop-filter: none;
+    }
+
     .read-more {
         width: 38vw;
         height: 5vh;
@@ -1040,16 +1099,19 @@ body.modal-open {
         display: none;
     }
     .read-all-btn {
-        width: 45vw;
+        width: 50vw;
         margin-right: 6rem;
     }
     .poem-frame:hover {
       transform: scale(1);
     }
-
     .modal-content {
         width: 100%;
         height: 80vh;
+        background: url(https://i.pinimg.com/1200x/e6/ab/7d/e6ab7d949381454d2a0e05f3d5a6cb9a.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .modal-content h2 {
         font-size: 2rem;
@@ -1083,15 +1145,22 @@ body.modal-open {
     .review-page {
         position: relative;
         height: auto;
+        padding: 2rem 0;
     }
     .masonry-div {
      column-count: 1;
      column-gap: 0.4rem;
-     margin: 0 2rem;
+     margin: 0;
      padding: 0;
    }
    .review-card {
-    width: 75vw;
+    width: 70vw;
+   }
+   .r-c-1,.r-c-3, .r-c-5 {
+    margin-left: 0.7rem;
+   }
+   .r-c-2, .r-c-4, .r-c-6 {
+    margin-left: 7rem;
    }
 }
 /* toggle device*/
@@ -1137,6 +1206,9 @@ body.modal-open {
         margin-left: 1.5rem;
     }
 
+    .modal-content {
+        width: 40vw;
+    }
     .poem-sec {
         margin: 0;
     }

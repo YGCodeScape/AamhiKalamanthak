@@ -7,8 +7,6 @@ https://i.pinimg.com/1200x/e6/ab/7d/e6ab7d949381454d2a0e05f3d5a6cb9a.jpg
    
 poem frame background: 
  https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg
-
-  background: url(https://i.pinimg.com/736x/07/51/33/075133cb8708112c27629ad5102a996d.jpg);
 -------------------- 
  background: linear-gradient(to right, rgba(255, 0, 212, 0.404),rgba(255, 0, 212, 0.733), rgb(255, 134, 249)); */
 ------------------------------------
@@ -18,4 +16,29 @@ https://i.pinimg.com/736x/1a/d5/68/1ad568e4e7ae50a5afadca2be758b5bd.jpg
 poem holder background
 https://i.pinimg.com/736x/eb/a7/e9/eba7e9aee93b00c4065363e1fa630b4d.jpg
 ------
-#0077b6
+     background: url( https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+     .poem-content {
+        color: #752f06;
+        text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
+    }
+
+--------------
+    color:#ffffff;
+    text-shadow: 2px 2px 6px #ffa7f3ec, 0 2px 0 #f518d0;
+
+        color: #ffffff;
+    text-shadow: 2px 2px 6px #ff94db, 0 2px 0#920563f6;
+
+-----------
+    background: url(https://i.pinimg.com/736x/2b/19/47/2b19472fb8449280d1a6c0f49187852a.jpg);
+
+https://i.pinimg.com/736x/95/0a/f9/950af9397ca78dc6ea8f125d104baeee.jpg
+    https://i.pinimg.com/736x/db/f8/3c/dbf83c3b274c3b80080dfc42d42b90cb.jpg
+
+  ---
+  lexica img
+  English background in light beige colours
+  https://image.lexica.art/full_webp/6ea7f321-0905-46de-be85-f3536042903a

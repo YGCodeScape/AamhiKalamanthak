@@ -14,16 +14,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #fca7ff;
-}
- ::-webkit-scrollbar-thumb {
-  background: #bc25a3; 
-  border-radius: 6px;
-}
 header {
     position: sticky;
     top: 0;
