@@ -13,7 +13,7 @@ body {
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 110px;
+    scroll-padding-top: 125px;
 }
 
  ::-webkit-scrollbar-thumb {
@@ -354,10 +354,13 @@ nav {
     transform: scale(1.06);
 }
 .poem-holder {
+    width: 100%;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     border-radius:10px;
     cursor: pointer;
 }
@@ -804,9 +807,10 @@ body.modal-open {
 .send-review-d {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     text-align: center;
-    margin: 2rem 2rem 1rem 10rem;
+    margin: 2rem 2rem;
 }
 .send-review-d span {
     font-size: 1rem;
@@ -822,12 +826,28 @@ body.modal-open {
     font-weight: 600;
     font-family: "Outfit", sans-serif;
     text-transform: uppercase;
-    padding: 0.2rem 0.5rem;
-    border-left: 2px solid #001d3d;
-    border-bottom: 2px solid #001d3d;
-    border-bottom-left-radius: 12px;
+    padding-bottom: 0.2rem;
+    display: inline-block;
+    position: relative;
 }
 
+.send-review-d a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #001d3d;
+    border-radius: 12px;
+    transform: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.send-review-d a:hover::after {
+    transform: scaleX(1); 
+    transform-origin:left; 
+}
 /*-----------------media query--- */
 /* Small mobile */
 @media (max-width: 360px) {
@@ -898,14 +918,15 @@ body.modal-open {
         height: auto;
         flex-direction: column;
         position: relative;
-        padding-top: 10rem;
-    }
-    .poem-frame {
-        background: url( https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
+        padding-top: 4rem;
     }
     .featured-poem-sec {
         width: 100%;
         gap: 3rem;
+    }
+    .f-poem-content {
+        height: 45vh;
+        font-size: 1.2rem;
     }
      .latest-poem-sec {
         width: 100%;
@@ -926,6 +947,15 @@ body.modal-open {
     .poem-frame {
         width: 100%;
         height: 100%;
+    }
+    .poem-holder {
+        backdrop-filter: none;
+        width: 100%;
+        height: 40vh;
+        justify-content: space-evenly;
+    }
+    .poem-title {
+        font-size: 1.6rem;
     }
     .read-more {
         width: 35vw;
@@ -965,6 +995,7 @@ body.modal-open {
     .book-page {
         position: relative;
         height: auto;
+        margin-top: 2rem;
     }
     .book-page h1 {
         font-size: 1.8rem;
@@ -1052,13 +1083,14 @@ body.modal-open {
     right: 18%;
    }
    .poem-sec {
-    margin: 0;
+     margin: 0;
+    padding-bottom: 2rem;
    }
     .poem-container {
         height: auto;
         flex-direction: column;
         position: relative;
-        padding-top: 6rem;
+        padding-top: 4rem;
     }
     .featured-poem-sec {
         width: 100%;
@@ -1071,7 +1103,7 @@ body.modal-open {
     }
     .f-poem-hold {
         width: 80vw;
-        height: 61vh;
+        height: 55vh;
     }
     .f-p-text {
         margin: 0;
@@ -1086,14 +1118,18 @@ body.modal-open {
     }
     .poem-holder {
         backdrop-filter: none;
+        width: 100%;
+        height: 40vh;
+        justify-content: space-evenly;
     }
-
+    .poem-title {
+        font-size: 1.6rem;
+    }
     .read-more {
         width: 38vw;
-        height: 5vh;
+        height: 6vh;
         font-size: 1.4rem;
-        margin-top: 2rem;
-        margin-bottom: 0.6rem;
+        background: #f89c3262;
     }
     .extra-frame {
         display: none;
@@ -1123,6 +1159,7 @@ body.modal-open {
     .book-page {
         position: relative;
         height: auto;
+        margin-top: 2rem;
     }
     .book-page-title {
        padding-left: 2rem;
