@@ -612,7 +612,7 @@ body.modal-open {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #e76f05;
+    color: #3c096c;
     font-family: "Outfit", sans-serif;
     text-transform: capitalize;
 }
@@ -647,7 +647,7 @@ body.modal-open {
 }
 .book-d {
     width: 18vw;
-    height: 50vh;
+    height: 53vh;
     /* border: 2px solid rgba(201, 199, 199, 0.918); */
     border-radius: 10px;
     position: relative;
@@ -859,6 +859,9 @@ body.modal-open {
 /*-----------------media query--- */
 /* Small mobile */
 @media (max-width: 360px) {
+    html {
+      scroll-padding-top: 110px;
+     }
      header {
         box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
      }
@@ -1013,6 +1016,7 @@ body.modal-open {
     }
     .book-d {
         width: 75vw;
+        height: 50vh;
     }
     .book-content {
         margin: 1rem 0;
@@ -1040,6 +1044,10 @@ body.modal-open {
    .r-c-2, .r-c-4, .r-c-6 {
     margin-left: 7rem;
    }
+   .send-review-d {
+       flex-direction: column;
+   }
+
 }
 /* Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
@@ -1185,6 +1193,7 @@ body.modal-open {
     }
     .book-d {
         width: 75vw;
+        height: 50vh;
     }
     .book-content {
         margin: 1rem 0;
@@ -1222,6 +1231,9 @@ body.modal-open {
 @media (min-width: 768px) and (max-width: 920px) {
      .nav-tag a {
         font-size: 1rem;
+    }
+    .nav-hold {
+        gap: 0;
     }
     .word-mark {
      width: 200px;   
@@ -1296,9 +1308,22 @@ body.modal-open {
     }
     .book-d {
         width: 25vw;
+        height: 50vh;
     }
     .book-page-title {
         padding-left: 4rem;
+    }
+    .book-title  {
+        font-size: 0.8rem;
+    }
+    .book-content {
+        font-size: 0.8rem;
+    }
+    .buy-now-btn {
+        width: 11vw;
+    }
+    .buy-now-btn a {
+        font-size: 0.8rem;
     }
     .review-page {
         height: 100vh;
@@ -1308,6 +1333,10 @@ body.modal-open {
        column-gap: 0;
        padding: 0 1rem;
        margin: 0 1rem;
+    }
+    .review-content span {
+       font-size: 0.6rem;
+       font-weight: 600;
     }
     .review-card {
         width: 28vw;
@@ -1375,6 +1404,18 @@ body.modal-open {
     }
     .book-page-title {
         padding-left: 8rem;
+    }
+    .book-title  {
+        font-size: 0.8rem;
+    }
+    .book-content {
+        font-size: 0.8rem;
+    }
+    .buy-now-btn {
+        width: 11vw;
+    }
+    .buy-now-btn a {
+        font-size: 0.8rem;
     }
 
     .review-page {
