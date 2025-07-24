@@ -437,8 +437,13 @@ body.modal-open {
         margin: 1rem 0 0 0;
     }
     .read-more {
+        width: 12vw;
         margin-top: 2rem;
     }
+    .modal-content {
+        width: 45vw;
+        height: 95vh;
+    } 
 }
 /* device nest hub */
 @media (min-width: 921px) and (max-width: 1024px) {
@@ -449,8 +454,20 @@ body.modal-open {
     .poem-content {
         margin: 1rem 0 0 0;
     }
+    .poem-holder {
+        gap: 1.5rem;
+        height: 55vh;
+    }
+    .poem-title {
+        font-size: 1.8rem;   
+    }
+    .poem-content {
+        font-size: 0.9rem;
+    }
     .read-more {
         margin-top: 2rem;
+        width: 15vw;
+        height: 8vh;
     }
     .modal-content {
          width: 40vw;
