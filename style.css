@@ -666,7 +666,7 @@ body.modal-open {
 .book-overlay {
     height: 0;
     width: 100%;
-    background: #f2ebfb;
+    background: linear-gradient(40deg, #a154ff,#b885fc, #f2ebfb);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -698,7 +698,7 @@ body.modal-open {
     font-family: "Comic Relief", system-ui;
     width: 90%;
     margin: 0.4rem 0;
-    color: #c77dffd6;
+    color: #fcf9ff;
     display: flex;
     flex-direction: column;
 }
