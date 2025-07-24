@@ -13,7 +13,7 @@ body {
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 125px;
+    scroll-padding-top: 100px;
 }
 
  ::-webkit-scrollbar-thumb {
@@ -777,6 +777,13 @@ body.modal-open {
 }
 .review-user {
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.like-i {
+    font-size: 1.4rem;
+    color: #e63946;
 }
 
 .user-info strong {
@@ -829,6 +836,7 @@ body.modal-open {
     padding-bottom: 0.2rem;
     display: inline-block;
     position: relative;
+    color: #00afb9;
 }
 
 .send-review-d a::after {
@@ -838,7 +846,7 @@ body.modal-open {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #001d3d;
+    background: #023e8a;
     border-radius: 12px;
     transform: right;
     transform: scaleX(0);
@@ -1035,6 +1043,9 @@ body.modal-open {
 }
 /* Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
+    html {
+      scroll-padding-top: 110px;
+   }
      header {
         box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
      }
@@ -1141,6 +1152,7 @@ body.modal-open {
     .poem-frame:hover {
       transform: scale(1);
     }
+
     .modal-content {
         width: 100%;
         height: 80vh;
@@ -1163,6 +1175,7 @@ body.modal-open {
     }
     .book-page-title {
        padding-left: 2rem;
+       padding-top: 1rem;
     }
     .book-page h1 {
         font-size: 1.8rem;
@@ -1199,6 +1212,11 @@ body.modal-open {
    .r-c-2, .r-c-4, .r-c-6 {
     margin-left: 7rem;
    }
+
+   .send-review-d {
+       flex-direction: column;
+   }
+
 }
 /* toggle device*/
 @media (min-width: 768px) and (max-width: 920px) {
