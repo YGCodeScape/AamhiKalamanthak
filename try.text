@@ -49,99 +49,104 @@ book overlay
        bc   color: #c77dffd6;
 
 ------------
- <div class="event-showcase-page">
-             <div class="showcase-container">
-                <h2 class="showcase-title">performed at </h2>
-                 <div class="showcase-cards">
-                     <div class="showcase-card"><img src="/img/anushka.jpg" alt=""></div>
-                     <div class="showcase-card"><img src="/img/anushka22.jpg" alt=""></div>
-                     <div class="showcase-card"><img src="/img/anushka5.jpg" alt=""></div>
+<div class="scroll-slider-section">
+             <div class="scroll-slider-container">
+                 <h2 class="scroll-slider-title">From page to performance..</h2>
+                 <div class="scroll-slider-images">
+                     <div class="slider-card"><img src="./img/poet-katta.jpg" alt=""></div>
+                     <div class="slider-card"><img src="./img/poet of pune.jpg" alt=""></div>
+                     <div class="slider-card"><img src="./img/upcominng-event (1).png" alt=""></div>
                  </div>
              </div>
         </div>
-    
-.event-showcase-page {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 2rem;
-    position: relative;
-    overflow-x: hidden;
+
+-----------------------
+.scroll-slider-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 4rem;
 }
 
-.showcase-container {
-    background: crimson;
-    width: 50%;
-    height: 100vh; /* fixed height for pinning */
-    display: flex;
-    flex-direction: column;
-    position: relative;
+.scroll-slider-container {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.showcase-title {
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: "Outfit", sans-serif;
-    color: #ffffff;
-    margin: 2rem auto;
-    text-align: center;
+.scroll-slider-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: #05668d;
 }
 
-.showcase-cards {
-    position: relative;
-    width: 20vw;
-    height: 70vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
+.scroll-slider-images {
+  position: relative;
+  width: 25vw;
+  height: 70vh;
 }
 
-.showcase-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-.showcase-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+.slider-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  /* transform: translateX(100px) rotate(-30deg);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d; */
 }
 
+.slider-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  image-rendering: crisp-edges;
+}
+---------------
+const cards = document.querySelectorAll(".slider-card");
 
-gsap.registerPlugin(ScrollTrigger);
-
-// Main timeline to pin the container during scroll
-let cards = document.querySelectorAll(".showcase-card");
-
-let tl2 = gsap.timeline({
+let timeline = gsap.timeline({
   scrollTrigger: {
-    trigger: ".showcase-container",
+    trigger: ".scroll-slider-section",
     start: "top top",
-    end: "+=" + cards.length * 2000, // scroll distance based on number of cards
-    pin: true,
+    end: "+=" + (cards.length * 500),  // adjust scroll distance
     scrub: true,
+    pin: true,
     markers: true
   }
 });
 
-// Animate cards one-by-one in timeline
 cards.forEach((card, i) => {
-  tl2.fromTo(
-    card,
-    { x: 400, rotate: -60, autoAlpha: 0, zIndex: i },
-    { x: 0, rotate: 0, autoAlpha: 1, ease: "power2.out", duration: 1 },
-    i * 0.7
+  timeline.fromTo(card,
+    {
+      opacity: 0,
+      x: 300,
+      rotate: -30,
+      scale: 0.95,
+      zIndex: i
+    },
+    {
+      opacity: 1,
+      x: 0,
+      rotate: 0,
+      duration: 1,
+      scale: 1,
+      ease: "power2.out"
+    },
+    i * 1
   );
-
-  // Optional: Fade out previous
-  if (i > 0) {
-    tl2.to(cards[i - 1], { autoAlpha: 0 }, i * 0.7 + 0.5);
-  }
 });

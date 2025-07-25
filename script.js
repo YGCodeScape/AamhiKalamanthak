@@ -108,12 +108,13 @@ window.addEventListener("click", (e) => {
 poemModelFocus();
 // -----------------------
 
+function ShowcaseSlider() {
 const cards = document.querySelectorAll(".slider-card");
 
 let timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".scroll-slider-section",
-    start: "top top",
+    start: "top 50",
     end: "+=" + (cards.length * 500),  // adjust scroll distance
     scrub: true,
     pin: true,
@@ -141,3 +142,5 @@ cards.forEach((card, i) => {
     i * 1
   );
 });
+}
+// ShowcaseSlider();
