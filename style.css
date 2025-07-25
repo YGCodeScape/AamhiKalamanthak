@@ -861,6 +861,9 @@ body.modal-open {
 
 .scroll-slider-title {
   font-size: 2rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 1px;
   margin-bottom: 2rem;
   color: #cdb4db;
 }
@@ -880,6 +883,8 @@ body.modal-open {
   opacity: 0;
   transform: translateX(100px) rotate(-30deg);
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .slider-card img {
@@ -887,7 +892,7 @@ body.modal-open {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  image-rendering: crisp-edges;
 }
 
 .after-section {

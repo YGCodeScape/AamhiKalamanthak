@@ -127,6 +127,7 @@ cards.forEach((card, i) => {
       opacity: 0,
       x: 300,
       rotate: -30,
+      scale: 0.95,
       zIndex: i
     },
     {
@@ -134,6 +135,7 @@ cards.forEach((card, i) => {
       x: 0,
       rotate: 0,
       duration: 1,
+      scale: 1,
       ease: "power2.out"
     },
     i * 1
