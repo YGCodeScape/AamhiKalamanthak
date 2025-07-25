@@ -106,3 +106,36 @@ window.addEventListener("click", (e) => {
 });
 }
 poemModelFocus();
+// -----------------------
+
+const cards = document.querySelectorAll(".slider-card");
+
+let timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".scroll-slider-section",
+    start: "top top",
+    end: "+=" + (cards.length * 500),  // adjust scroll distance
+    scrub: true,
+    pin: true,
+    markers: true
+  }
+});
+
+cards.forEach((card, i) => {
+  timeline.fromTo(card,
+    {
+      opacity: 0,
+      x: 300,
+      rotate: -30,
+      zIndex: i
+    },
+    {
+      opacity: 1,
+      x: 0,
+      rotate: 0,
+      duration: 1,
+      ease: "power2.out"
+    },
+    i * 1
+  );
+});

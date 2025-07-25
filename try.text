@@ -47,3 +47,101 @@ https://i.pinimg.com/736x/95/0a/f9/950af9397ca78dc6ea8f125d104baeee.jpg
 book overlay
       background: #f2ebfb;
        bc   color: #c77dffd6;
+
+------------
+ <div class="event-showcase-page">
+             <div class="showcase-container">
+                <h2 class="showcase-title">performed at </h2>
+                 <div class="showcase-cards">
+                     <div class="showcase-card"><img src="/img/anushka.jpg" alt=""></div>
+                     <div class="showcase-card"><img src="/img/anushka22.jpg" alt=""></div>
+                     <div class="showcase-card"><img src="/img/anushka5.jpg" alt=""></div>
+                 </div>
+             </div>
+        </div>
+    
+.event-showcase-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.showcase-container {
+    background: crimson;
+    width: 50%;
+    height: 100vh; /* fixed height for pinning */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.showcase-title {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    color: #ffffff;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.showcase-cards {
+    position: relative;
+    width: 20vw;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.showcase-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.showcase-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Main timeline to pin the container during scroll
+let cards = document.querySelectorAll(".showcase-card");
+
+let tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".showcase-container",
+    start: "top top",
+    end: "+=" + cards.length * 2000, // scroll distance based on number of cards
+    pin: true,
+    scrub: true,
+    markers: true
+  }
+});
+
+// Animate cards one-by-one in timeline
+cards.forEach((card, i) => {
+  tl2.fromTo(
+    card,
+    { x: 400, rotate: -60, autoAlpha: 0, zIndex: i },
+    { x: 0, rotate: 0, autoAlpha: 1, ease: "power2.out", duration: 1 },
+    i * 0.7
+  );
+
+  // Optional: Fade out previous
+  if (i > 0) {
+    tl2.to(cards[i - 1], { autoAlpha: 0 }, i * 0.7 + 0.5);
+  }
+});
