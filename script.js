@@ -118,7 +118,7 @@ let timeline = gsap.timeline({
     end: "+=" + (cards.length * 500),  // adjust scroll distance
     scrub: true,
     pin: true,
-    markers: true
+    // markers: true
   }
 });
 
@@ -143,4 +143,4 @@ cards.forEach((card, i) => {
   );
 });
 }
-ShowcaseSlider();
+// ShowcaseSlider();
