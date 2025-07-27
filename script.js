@@ -42,6 +42,9 @@ menuItems.forEach(item => {
 }
 menuTlAnimation();
 
+// poem btn animation 
+
+
 
 // poem focus model
 function poemModelFocus() {

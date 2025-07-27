@@ -247,144 +247,51 @@ nav {
 /*------------poem sections--------- */
 .poem-container {
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     display: flex;
-    flex-direction: row;
-}
-.poem-sec {
-    margin: 0 0 0 3rem;
-    padding-bottom: 4rem;
-}
-.featured-poem-sec {
-    width: 30%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 8vh;
+    gap: 3rem;
+    border: 2px solid red;
+    padding: 2rem 0;
 }
-.f-p-text {
-    font-size: 2rem;
-    font-family: "Comic Relief", system-ui;
-    color: #bc6c25;
-    line-height: 0;
-    letter-spacing: 1px;
-    margin-left: 4rem;
-}
-.f-poem-hold {
-    width: 25vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 2rem;
-    margin: 0;
-    padding: 0;
-    background: url(https://i.pinimg.com/736x/f6/2d/9d/f62d9d6e69fddc5371d313d19c145fbd.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-.f-poem-hold::after {
-    content: "";
+.f-text {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fdebe23d;
-    border-radius: 2rem;
-    z-index: -2;
-}
-.f-poem-hold:hover {
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-.f-poem-title {
-    color:#ffffff;
-    text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
-    font-size: 2rem;
-    font-family: "Kalam", cursive;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 1.2rem;
-}
-.f-poem-content {
-    margin-top: 1rem;
-     color: #f87924d7;
-    text-shadow: 2px 2px 8px #ffffffad, 0 1px 0 #ffffff;
-    font-size: 1.5rem;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    line-height: 1.8;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-}
-
-.latest-poem-sec {
-    width: 70%;
-    height: auto;
-    margin: 20px auto;
-  display:grid;
-  justify-content: center;
-  grid-template-columns: 230px 230px 230px;
-  grid-row: auto auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 10px;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Comic Relief", system-ui;
+    color: #ef476f;
 }
 .poem-frame {
-    width: 100%;
-    height: 100%;
-    border-radius:10px;
-    background: url( https://i.pinimg.com/1200x/53/58/23/535823b57f1b09df8567924fcff9d6d2.jpg);
-    background-size: cover;
+    position: relative;
+    width: 20vw;
+    height: 55vh;
+    border-radius: 15px;
+    background: url(https://i.pinimg.com/736x/7b/fb/ed/7bfbed6c8f631deeab40ccfe2b623c39.jpg);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
-    transition: 0.3s ease-in-out;
-}
-.poem-frame:hover {
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px #888787d3;
+    border: 0.5rem solid #fff;
 }
 .poem-holder {
     width: 100%;
     height: 100%;
-    text-align: center;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius:10px;
-    cursor: pointer;
-}
-.read-more {
-    display: inline-block;
-    position: relative;
-    width: 10vw;
-    height: 6vh;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 500;
-    font-family: "Outfit", sans-serif;
-    background: transparent;
-    text-align: center;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 6px;
-    margin-top:3rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    overflow: hidden;   
+    flex-wrap: wrap;
+    gap: 1.6rem;
 }
 .poem-title {
     color:#ffffff;
     text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-family: "Kalam", cursive;
     font-weight: 500;
     line-height: normal;
@@ -405,6 +312,31 @@ nav {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
+.read-more {
+    position: relative;
+    display: inline-block;
+    width: 10vw;
+    height: 7.4vh;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    background: transparent;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    margin-top: 2rem;
+    cursor: pointer;
+    background: rgba(168, 168, 168, 0.589);
+    overflow: hidden; 
+    opacity: 0;
+    transform: translateY(30px);  /* Start 20px below original position */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both */
+}
+.poem-holder:hover .read-more {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
 }
 /* --button  */
 button::before,
@@ -472,54 +404,6 @@ button::after {
 	transition-duration: 0.05s;
 	transition-delay: 0.4s;
 	transition-timing-function: linear;
-}
-.read-all-d {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 3rem;
-}
-.read-all-btn {
-    display: inline-block;
-    position: relative;
-    width: 13vw;
-    height: 8vh;
-    background: transparent;
-    border-radius: 6px;
-    border: none;
-    margin-right: 23rem;
-    cursor: pointer;
-    overflow: hidden;
-}
-.read-all-btn:hover {
-    border: 2px solid  #bc6c25;
-}
-.read-all-btn:hover a {
-    color: #bc6c25;
-}
-.read-all-btn a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 500;
-    font-family: "Outfit", sans-serif;
-    letter-spacing: 0.05rem;
-    text-align: center;
-    position: relative;
-}
-
-.button--mimas::before {
-	content: '';
-    background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
-	width: 120%;
-	left: -10%;
-	transform: skew(30deg);
-	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-}
-
-.button--mimas:hover::before {
-	transform: translate3d(100%,0,0);
 }
 /*------poem overlay */
 /* Modal background */
@@ -927,7 +811,7 @@ footer {
     background: linear-gradient(to right, #f9f4f9, #0071b8);
 }
 /*-----------------media query--- */
-/* Portrait Small mobile  mummy phone*/
+/* Portrait Small mobile*/
 @media  (max-width: 360px) {
     html {
       scroll-padding-top: 100px;
@@ -1150,7 +1034,7 @@ footer {
    }
 
 }
-/* Large mobile my phone*/
+/* Portrait Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
     html {
       scroll-padding-top: 110px;
@@ -1581,6 +1465,7 @@ footer {
         width: 30vw;
     }
 }
+/* restrictions to mobile landscape mode. */
 @media screen and (orientation: landscape) and (max-height: 360px) {
   body::before {
     content: "Please rotate your device to portrait mode.";
