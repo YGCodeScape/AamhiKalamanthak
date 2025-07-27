@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
 }
 body {
     margin: 0;
@@ -287,7 +288,6 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
-    transform: scale(1);
     transition: 0.3s ease-in-out;
 }
 .f-poem-hold::after {
@@ -302,7 +302,7 @@ nav {
     z-index: -2;
 }
 .f-poem-hold:hover {
-    transform: scale(1.06);
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .f-poem-title {
     color:#ffffff;
@@ -347,11 +347,10 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: scale(1);
     transition: 0.3s ease-in-out;
 }
 .poem-frame:hover {
-    transform: scale(1.06);
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .poem-holder {
     width: 100%;
@@ -847,7 +846,6 @@ body.modal-open {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  /* margin-top: 3rem; */
 }
 
 .scroll-slider-container {
@@ -858,7 +856,6 @@ body.modal-open {
   flex-direction: row;
   gap: 3rem;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .intro-text{
@@ -930,10 +927,10 @@ footer {
     background: linear-gradient(to right, #f9f4f9, #0071b8);
 }
 /*-----------------media query--- */
-/* Small mobile  mummy phone*/
-@media (max-width: 360px) {
+/* Portrait Small mobile  mummy phone*/
+@media  (max-width: 360px) {
     html {
-      scroll-padding-top: 110px;
+      scroll-padding-top: 100px;
       overflow-x: hidden;
      }
      header {
@@ -1017,7 +1014,7 @@ footer {
      .latest-poem-sec {
         width: 100%;
         grid-column-gap: 30px;
-        grid-template-columns: 80%;
+        grid-template-columns: 70%;
     }
     .f-poem-hold {
         width: 80vw;
@@ -1044,11 +1041,10 @@ footer {
         font-size: 1.6rem;
     }
     .read-more {
-        width: 35vw;
-        height: 5vh;
-        font-size: 1rem;
-        margin-top: 2rem;
-        margin-bottom: 0.6rem;
+        width: 38vw;
+        height: 6vh;
+        font-size: 1.4rem;
+        background: #f89c3262;
     }
         .extra-frame {
         display: none;
@@ -1084,7 +1080,7 @@ footer {
         margin-top: 2rem;
     }
     .book-page h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     .books-frame {
         flex-direction: column;
@@ -1117,10 +1113,40 @@ footer {
     margin-left: 0.7rem;
    }
    .r-c-2, .r-c-4, .r-c-6 {
-    margin-left: 7rem;
+    margin-left: 6.3rem;
    }
    .send-review-d {
+        width: 100%;
        flex-direction: column;
+       margin: 2rem 0;
+       padding: 0.4rem 1rem;
+   }
+
+   .scroll-slider-section {
+       height: 110vh;
+   }
+   .scroll-slider-container {
+     flex-direction: column;
+     gap: 4rem;
+   }
+   .intro-text {
+    width : 100%;
+    margin: 0;
+    height: auto;
+   }
+   .scroll-slider-title {
+       font-size :1.5rem;
+       margin-left: 1rem;
+   }
+   .intro-text p {
+       width: 90%;
+       font-size: 0.8rem;
+       margin-left: 0.8rem;
+   }
+
+   .scroll-slider-images {
+     width: 85vw;
+     height: 60vh;
    }
 
 }
@@ -1297,14 +1323,40 @@ footer {
    .r-c-2, .r-c-4, .r-c-6 {
     margin-left: 7rem;
    }
-
    .send-review-d {
        flex-direction: column;
    }
 
+   .scroll-slider-section {
+       height: 110vh;
+   }
+   .scroll-slider-container {
+     flex-direction: column;
+     gap: 4rem;
+   }
+   .intro-text {
+    width : 100%;
+    margin: 0;
+    height: auto;
+   }
+   .scroll-slider-title {
+       font-size :1.5rem;
+       margin-left: 1rem;
+   }
+   .intro-text p {
+       width: 90%;
+       font-size: 0.8rem;
+       margin-left: 0.8rem;
+   }
+
+   .scroll-slider-images {
+     width: 85vw;
+     height: 55vh;
+   }
+
 }
 /* toggle device*/
-@media (min-width: 768px) and (max-width: 920px) {
+@media (min-width: 768px) and (max-width: 1000px) {
      .nav-tag a {
         font-size: 1rem;
     }
@@ -1417,9 +1469,23 @@ footer {
     .review-card {
         width: 28vw;
     }
+
+    .scroll-slider-images {
+      position: relative;
+      width: 35vw;
+      height: 65vh;
+    }
+    .scroll-slider-title {
+        font-size: 1.5rem;
+    }
+    .intro-text p {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 1rem 1.3rem;
+    }
 }
 /* device nest hub */
-@media (min-width: 921px) and (max-width: 1124px) {
+@media (min-width: 1001px) and (max-width: 1224px) {
     .hero-left {
         width: 60%;
     }
@@ -1507,4 +1573,30 @@ footer {
     .review-card {
         width: 28vw;
     }
+
+    .intro-text {
+        width: 50%;
+    }
+    .scroll-slider-images {
+        width: 30vw;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 360px) {
+  body::before {
+    content: "Please rotate your device to portrait mode.";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;    
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: "Outfit", sans-serif;
+    text-align: center;
+  }
 }

@@ -43,31 +43,6 @@ menuItems.forEach(item => {
 menuTlAnimation();
 
 
-// cursor script
-// function pageCursor() {
-//     document.addEventListener("mousemove", function(para) {
-//         gsap.to(".cursor", {
-//             left: para.x,
-//             top: para.y,
-//         })
-//     })
-//     document.querySelector(".poem-container").addEventListener
-//         ("mouseenter", function() {
-//           gsap.to(".cursor",{
-//             transform: "translate(-50%, -50%) scale(1)",
-//         })
-//     })
-//     document.querySelector(".poem-container").addEventListener
-//         ("mouseleave", function() {
-//           gsap.to(".cursor",{
-//             transform: "translate(-50%, -50%)",
-//             scale: 0,
-//         })
-//     })
-// }
-// pageCursor();
-
-
 // poem focus model
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
@@ -109,18 +84,24 @@ poemModelFocus();
 // -----------------------
 
 function ShowcaseSlider() {
+
+// Check screen width and set start position accordingly
+const isSmallScreen = window.innerWidth <= 380;
+const startValue = isSmallScreen ? "top -100" : "top 50";
+
 const cards = document.querySelectorAll(".slider-card");
 
 let timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".scroll-slider-section",
-    start: "top 50",
+    start: startValue,
     end: "+=" + (cards.length * 500),  // adjust scroll distance
     scrub: true,
     pin: true,
     // markers: true
   }
 });
+
 
 cards.forEach((card, i) => {
   timeline.fromTo(card,
@@ -143,4 +124,4 @@ cards.forEach((card, i) => {
   );
 });
 }
-// ShowcaseSlider();
+ShowcaseSlider();
