@@ -286,7 +286,7 @@ nav {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.6rem;
+    gap: 1.3rem;
 }
 .poem-title {
     color:#ffffff;
@@ -295,15 +295,15 @@ nav {
     font-family: "Kalam", cursive;
     font-weight: 500;
     line-height: normal;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
 }
 .poem-content {
     width: 100%;
-    color: #752f06;
-    text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
-    font-size: 0.8rem;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
+    color: #ff6600d7;
+    text-shadow: 2px 2px 8px #ffbda9ad, 0 2px 0 rgb(255, 255, 255);
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: "Tiro Devanagari Marathi", serif;
     text-align: center;
     line-height: 2;
     margin: 1rem 0 0 0;
@@ -326,12 +326,12 @@ nav {
     text-align: center;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 6px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer;
     background: rgba(168, 168, 168, 0.589);
     overflow: hidden; 
     opacity: 0;
-    transform: translateY(30px);  /* Start 20px below original position */
+    transform: translateY(50px);  /* Start 50px below original position */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both */
 }
 .poem-holder:hover .read-more {
@@ -878,67 +878,36 @@ footer {
     .sub-text {
        font-size: 18px;
     }
-       .poem-sec {
-        margin: 0;
-   }
     .poem-container {
         height: auto;
         flex-direction: column;
         position: relative;
-        padding-top: 4rem;
-    }
-    .featured-poem-sec {
-        width: 100%;
-        gap: 3rem;
-    }
-    .f-poem-content {
-        height: 45vh;
-        font-size: 1.2rem;
-    }
-     .latest-poem-sec {
-        width: 100%;
-        grid-column-gap: 30px;
-        grid-template-columns: 70%;
-    }
-    .f-poem-hold {
-        width: 80vw;
-        height: 65vh;
-    }
-    .f-p-text {
-        margin: 0;
-    }
-    .f-btn {
-        width: 45vw;
-        font-size: 1.8rem;
+        padding-top: 3rem;
+        align-items: center;
     }
     .poem-frame {
-        width: 100%;
-        height: 100%;
+        width: 75vw;
+        height: 50vh;
     }
     .poem-holder {
-        backdrop-filter: none;
-        width: 100%;
-        height: 40vh;
         justify-content: space-evenly;
+        gap: 1rem;
     }
-    .poem-title {
-        font-size: 1.6rem;
+    .poem-title  {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    .poem-content {
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
     }
     .read-more {
-        width: 38vw;
-        height: 6vh;
-        font-size: 1.4rem;
-        background: #f89c3262;
+        width: 40vw;
+        background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
     }
-        .extra-frame {
+    .read-more::after,
+    .read-more::before {
         display: none;
-    }
-    .read-all-btn {
-        width: 50vw;
-        margin-right: 6rem;
-    }
-     .poem-frame:hover {
-      transform: scale(1);
     }
     .modal-content {
         width: 100%;
@@ -1087,64 +1056,37 @@ footer {
    .close{
     right: 18%;
    }
-   .poem-sec {
-     margin: 0;
-    padding-bottom: 2rem;
-   }
-    .poem-container {
+       .poem-container {
         height: auto;
         flex-direction: column;
         position: relative;
-        padding-top: 4rem;
-    }
-    .featured-poem-sec {
-        width: 100%;
-        gap: 3rem;
-    }
-     .latest-poem-sec {
-        width: 100%;
-        grid-column-gap: 30px;
-        grid-template-columns: 70%;
-    }
-    .f-poem-hold {
-        width: 80vw;
-        height: 55vh;
-    }
-    .f-p-text {
-        margin: 0;
-    }
-    .f-btn {
-        width: 45vw;
-        font-size: 1.8rem;
-    }
-    .poem-frame {
-        width: 100%;
-        height: 100%;
-    }
-    .poem-holder {
-        backdrop-filter: none;
-        width: 100%;
-        height: 40vh;
-        justify-content: space-evenly;
+        padding-top: 3rem;
+        align-items: center;
     }
     .poem-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+    .poem-content{ 
+        font-size: 1rem;
+        margin-top: 0.4rem;
+    }
+    .poem-frame {
+        width: 75vw;
+        height: 45vh;
+    }
+    .poem-holder {
+        gap: 1rem;
+        justify-content: space-evenly;
     }
     .read-more {
-        width: 38vw;
+        width: 40vw;
         height: 6vh;
-        font-size: 1.4rem;
-        background: #f89c3262;
+        background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
     }
-    .extra-frame {
+    .read-more::after,
+    .read-more::before {
         display: none;
-    }
-    .read-all-btn {
-        width: 50vw;
-        margin-right: 6rem;
-    }
-    .poem-frame:hover {
-      transform: scale(1);
     }
 
     .modal-content {
