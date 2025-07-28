@@ -422,7 +422,6 @@ button::after {
     pointer-events: auto;
 	display: inline-block;
     background: transparent;
-    
 }
 .read-all-btn a{
     text-decoration: none;
@@ -857,7 +856,46 @@ footer {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #f9f4f9, #0071b8);
+    background: linear-gradient(to right, #e7c6ff, #c8b6ff);
+    color: #16425b;
+}
+.footer-container {
+    width: 100%;
+    height:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid green;
+}
+.footer-column {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+}
+.f-column1 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 0 1rem 0;
+}
+.b-t-t {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #fff;
+    width: 15%;
+    height: 100%;
+}
+.b-t-t a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
@@ -955,8 +993,16 @@ footer {
         background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
     }
     .read-more::after,
-    .read-more::before {
+    .read-more::before,
+    .read-all-btn::before {
         display: none;
+    }
+    .read-all-btn {
+        width: 55vw;
+       background: #ff0054;
+    }
+    .read-all-btn:hover a {
+        color: #fff;
     }
     .modal-content {
         width: 100%;
@@ -1134,10 +1180,17 @@ footer {
         background: linear-gradient(to right, #f89c32,#f7b054, #ce7e34);
     }
     .read-more::after,
-    .read-more::before {
+    .read-more::before, 
+    .read-all-btn::before {
         display: none;
     }
-
+    .read-all-btn {
+        width: 60vw;
+        background: #ff0054;
+    }
+     .read-all-btn:hover a {
+        color: #fff;
+     }
     .modal-content {
         width: 100%;
         height: 80vh;
@@ -1465,8 +1518,8 @@ footer {
     left: 0;
     background: black;    
     color: #fff;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -1474,5 +1527,8 @@ footer {
     font-size: 1.8rem;
     font-family: "Outfit", sans-serif;
     text-align: center;
+  }
+  body {
+    overflow: hidden;
   }
 }

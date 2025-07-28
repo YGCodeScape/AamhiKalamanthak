@@ -127,4 +127,4 @@ cards.forEach((card, i) => {
   );
 });
 }
-ShowcaseSlider();
+// ShowcaseSlider();
