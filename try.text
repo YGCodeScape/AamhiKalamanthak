@@ -40,3 +40,8 @@ book overlay
 ------------
     color: #752f06;
     text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
+----------
+social  i hover 
+#4e8fb3
+    background: linear-gradient(to right, #2f6690,  #0e4473);
+    color: #fcf7e3;
