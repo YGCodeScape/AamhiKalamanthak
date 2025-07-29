@@ -866,7 +866,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid rgb(0, 0, 0);
 }
 .footer-column {
     width: 100%;
@@ -881,21 +880,35 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0 0 1rem 0;
+    margin:1rem 0 0.5rem 0;
 }
 .b-t-t {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px solid #fff;
-    width: 15%;
+    width: 20%;
     height: 100%;
 }
 .b-t-t a {
     text-decoration: none;
     font-size: 2rem;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.b-t-t i {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Outfil", sans-serif;
+    padding: 0.4rem;
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
