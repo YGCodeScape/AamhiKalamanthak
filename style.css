@@ -5,8 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
+html,
 body {
     margin: 0;
     padding: 0;
@@ -882,7 +883,7 @@ footer {
     align-items: center;
     margin:1rem 0 0.5rem 0;
 }
-.f-column1 span {
+.f-c-1span{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -987,8 +988,15 @@ footer {
     height: 10%;
     border-top: 1px solid #fcf7e3;
 }
+.rights-d {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .rights-d span {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 400;
     font-family: "Sansation", sans-serif;
     letter-spacing: 0.1rem;
@@ -1194,6 +1202,55 @@ footer {
      height: 60vh;
    }
 
+      .b-t-text {
+    display: none;
+   }
+   .f-c-1span {
+    border: none;
+   }
+   .f-column1 span a {
+       padding: 0;
+   }
+   .f-column1 i {
+       margin : 0;
+       font-size: 2rem;
+   }
+   .contact-text {
+      font-size: 1.5rem;
+   }
+   .social-links {
+      gap: 0.2rem;
+   }
+   .social-i-d a {
+       font-size: 0.6rem;
+   }
+   .social-i-d i {
+       font-size: 2rem;
+   }
+   .contact-d span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 0.1rem;
+   }
+   .f-column3 {
+      width : 75%;
+   }
+   .f-column3 p {
+       font-size: 1rem;
+   }
+   .rights-d {
+       width:80%;
+   }
+   .rights-d span {
+       font-size: 0.6rem;
+       font-weight: 400;
+   }
+   footer {
+       width: 100%;
+       height : 60vh;
+   }
+
 }
 /* Portrait Large mobile */
 @media (min-width: 361px) and (max-width: 767px) { 
@@ -1377,6 +1434,55 @@ footer {
    .scroll-slider-images {
      width: 85vw;
      height: 55vh;
+   }
+   
+   .b-t-text {
+    display: none;
+   }
+   .f-c-1span {
+    border: none;
+   }
+   .f-column1 span a {
+       padding: 0;
+   }
+   .f-column1 i {
+       margin : 0;
+       font-size: 2rem;
+   }
+   .contact-text {
+      font-size: 1.5rem;
+   }
+   .social-links {
+      gap: 0.2rem;
+   }
+   .social-i-d a {
+       font-size: 0.6rem;
+   }
+   .social-i-d i {
+       font-size: 2rem;
+   }
+   .contact-d span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    letter-spacing: 0.1rem;
+   }
+   .f-column3 {
+      width : 75%;
+   }
+   .f-column3 p {
+       font-size: 1rem;
+   }
+   .rights-d {
+       width:80%;
+   }
+   .rights-d span {
+       font-size: 0.6rem;
+       font-weight: 400;
+   }
+   footer {
+       width: 100%;
+       height : 60vh;
    }
 
 }
