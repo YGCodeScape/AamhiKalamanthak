@@ -876,7 +876,7 @@ footer {
 }
 .f-column1 {
     width: 100%;
-    height: 12%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -890,7 +890,7 @@ footer {
     width: 20%;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 40px;
-    height: 100%;
+    height: 80%;
 }
 .f-column1 span a {
     text-decoration: none;
@@ -913,7 +913,7 @@ footer {
     margin-left: 1rem;
 }
 .f-column2 {
-    height: 27%;
+    height: 30%;
 }
 .contact-text {
     font-size: 2rem;
@@ -922,13 +922,13 @@ footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
     letter-spacing: 0.2rem;
+    padding-top: 1rem;
 }
 .social-links {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    margin: 1rem 0 0 0;
 }
 .social-i-d {
     width: 100%;
@@ -955,14 +955,14 @@ footer {
 }
 .f-column3 {
    width: 40%;
-   height: 13%;
+   height: 20%;
 }
 .f-column3 p {
     font-size: 1.4rem;
     font-weight: 500;
     font-family: "Outfit", sans-serif;
     text-align: center;
-    margin: 0.9rem 0;
+    margin: 2rem 0 0.9rem 0;
 }
 .f-column4 {
     width: 100%;
@@ -984,12 +984,14 @@ footer {
 .f-column5 {
     width: 100%;
     height: 10%;
+    border-top: 1px solid #fcf7e3;
 }
 .rights-d span {
     font-size: 0.8rem;
     font-weight: 400;
     font-family: "Sansation", sans-serif;
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
