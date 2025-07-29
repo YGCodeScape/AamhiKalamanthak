@@ -911,6 +911,7 @@ footer {
     font-family: "Outfit", sans-serif;
     padding: 0.4rem;
     margin-left: 1rem;
+    box-shadow: inset 0 0 10px rgba(36, 35, 35, 0.774);
 }
 .f-column2 {
     height: 30%;
