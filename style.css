@@ -1436,21 +1436,14 @@ footer {
      height: 55vh;
    }
    
-   .b-t-text {
-    display: none;
-   }
-   .f-c-1span {
-    border: none;
-   }
-   .f-column1 span a {
-       padding: 0;
+    .f-c-1span {
+       width: 80%;
    }
    .f-column1 i {
-       margin : 0;
        font-size: 2rem;
    }
    .contact-text {
-      font-size: 1.5rem;
+      font-size: 2.1rem;
    }
    .social-links {
       gap: 0.2rem;
@@ -1479,10 +1472,6 @@ footer {
    .rights-d span {
        font-size: 0.6rem;
        font-weight: 400;
-   }
-   footer {
-       width: 100%;
-       height : 60vh;
    }
 
 }
