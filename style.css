@@ -1218,12 +1218,22 @@ footer {
    }
    .social-links {
       gap: 0.2rem;
+      flex-wrap: wrap;
+      padding: 1.2rem 0;
+   }
+   .f-column2 {
+       height: auto;
+   }
+   .social-i-d {
+      height: auto;
+        flex: 0 0 calc(90% / 3 - 1px);
+        padding: 0;
    }
    .social-i-d a {
-       font-size: 0.6rem;
+       font-size: 0.7rem;
    }
    .social-i-d i {
-       font-size: 2rem;
+       font-size: 3.6rem;
    }
    .f-column3 {
       width : 90%;
@@ -1231,6 +1241,7 @@ footer {
    }
    .f-column3 p {
        font-size: 1.3rem;
+       margin: 0;
    }
    .f-column4 {
     height: auto;
@@ -1456,14 +1467,22 @@ footer {
    .contact-text {
       font-size: 2.1rem;
    }
+   .f-column2 {
+      height: auto;
+   }
    .social-links {
       gap: 0.2rem;
+          flex-wrap: wrap;
+   }
+   .social-i-d {
+        height: auto;
+        flex: 0 0 calc(90% / 3 - 1px);
    }
    .social-i-d a {
-       font-size: 0.6rem;
+       font-size: 0.7rem;
    }
    .social-i-d i {
-       font-size: 2rem;
+       font-size: 3.4rem;
    }
    .f-column3 {
       width : 85%;
@@ -1744,7 +1763,8 @@ footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
   }
-  body {
-    overflow: hidden;
+
+  header, main, footer{
+     display: none;
   }
 }
