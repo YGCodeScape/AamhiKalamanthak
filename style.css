@@ -874,6 +874,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: 0.3s ease;
 }
 .f-column1 {
     width: 100%;
@@ -1646,6 +1647,13 @@ footer {
         font-size: 0.8rem;
         padding: 1rem 1.3rem;
     }
+
+    .f-c-1span {
+        width: 30%;
+    }
+    .f-column3 {
+        width: 60%;
+    }
 }
 /* device nest hub */
 @media (min-width: 1001px) and (max-width: 1224px) {
@@ -1742,6 +1750,13 @@ footer {
     }
     .scroll-slider-images {
         width: 30vw;
+    }
+
+    .f-c-1span {
+        width: 30%;
+    }
+    .f-column3 {
+        width: 60%;
     }
 }
 /* restrictions to mobile landscape mode. */
