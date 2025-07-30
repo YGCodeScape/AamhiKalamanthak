@@ -889,7 +889,7 @@ footer {
     justify-content: center;
     text-align: center;
     width: 20%;
-    border: 2px solid rgb(255, 255, 255);
+    background: #fcf7e3;
     border-radius: 40px;
     height: 80%;
 }
@@ -898,21 +898,21 @@ footer {
     font-size: 2rem;
     font-weight: 500;
     font-family: "Outfit", sans-serif;
-    color: #fff;
+    color: #0e4473;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding-left: 2rem;
 }
 .f-column1 i {
-    color: #fff;
+    color: #0e4473;
     border-radius: 50px;
-    border: 2px solid #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     font-family: "Outfit", sans-serif;
-    padding: 0.4rem;
-    margin-left: 1rem;
-    box-shadow: inset 0 0 10px rgba(36, 35, 35, 0.774);
+    padding-top: 0.4rem;
+    margin-left: 0.4rem;
 }
 .f-column2 {
     height: 30%;
@@ -1202,21 +1202,19 @@ footer {
      height: 60vh;
    }
 
-      .b-t-text {
-    display: none;
+   .f-column1 {
+    height: auto;
    }
    .f-c-1span {
-    border: none;
-   }
-   .f-column1 span a {
-       padding: 0;
+      width: 80%;
+      height: 9vh;
    }
    .f-column1 i {
-       margin : 0;
-       font-size: 2rem;
+       margin-left: 0.4rem;
+       font-size: 2.5rem;
    }
    .contact-text {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
    }
    .social-links {
       gap: 0.2rem;
@@ -1227,28 +1225,37 @@ footer {
    .social-i-d i {
        font-size: 2rem;
    }
-   .contact-d span {
-    font-size: 0.8rem;
-    font-weight: 400;
-    font-family: "Outfit", sans-serif;
-    letter-spacing: 0.1rem;
-   }
    .f-column3 {
-      width : 75%;
+      width : 90%;
+      height: auto;
    }
    .f-column3 p {
-       font-size: 1rem;
+       font-size: 1.3rem;
    }
-   .rights-d {
-       width:80%;
+   .f-column4 {
+    height: auto;
    }
-   .rights-d span {
-       font-size: 0.6rem;
+   .contact-d {
+      gap: 0.8rem;
+      width: 100%;
+   }
+    .contact-d span {
+       font-size: 0.8rem;
        font-weight: 400;
+       font-family: "Outfit", sans-serif;
+       letter-spacing: 0.1rem;
+   }
+    .rights-d span {
+       font-size: 0.7rem;
+       font-weight: 400;
+   }
+    .rights-d {
+       width: 100%;
+       padding: 0 0.1rem;
    }
    footer {
        width: 100%;
-       height : 60vh;
+       height : 85vh;
    }
 
 }
@@ -1436,8 +1443,12 @@ footer {
      height: 55vh;
    }
    
+    .f-column1 {
+       height: auto;
+   }
     .f-c-1span {
        width: 80%;
+       height: 8vh;
    }
    .f-column1 i {
        font-size: 2rem;
@@ -1454,24 +1465,37 @@ footer {
    .social-i-d i {
        font-size: 2rem;
    }
-   .contact-d span {
-    font-size: 0.8rem;
-    font-weight: 400;
-    font-family: "Outfit", sans-serif;
-    letter-spacing: 0.1rem;
-   }
    .f-column3 {
-      width : 75%;
+      width : 85%;
+      height: auto;
    }
    .f-column3 p {
-       font-size: 1rem;
+       font-size: 1.3rem;
+       margin: 0;
    }
-   .rights-d {
-       width:80%;
+   .f-column4 {
+       height: auto;
+   }
+   .contact-d {
+      width: 100%;
+      gap: 0.8rem;
+   }
+    .contact-d span {
+       font-size: 0.9rem;
+       font-weight: 400;
+       font-family: "Outfit", sans-serif;
+       letter-spacing: 0.1rem;
+   }
+    .rights-d {
+       width: 90%;
+       padding: 0 0.1rem;
    }
    .rights-d span {
-       font-size: 0.6rem;
+       font-size: 0.7rem;
        font-weight: 400;
+   }
+   footer {
+    height: 85vh;
    }
 
 }
