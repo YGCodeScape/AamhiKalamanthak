@@ -949,12 +949,20 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: 0.3s ease;
 }
 .social-i-d i {
     font-size: 4rem;
     font-weight: 500;
     font-family: "Outfit", sans-serif;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.social-i-d i:hover {
+      transform: scale(1.3); /* zoom effect */
+}
+.social-i-d a:hover .icon-text {
+    display: none;
 }
 .f-column3 {
    width: 40%;
