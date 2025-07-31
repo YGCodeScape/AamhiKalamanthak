@@ -885,7 +885,7 @@ footer {
     margin:1rem 0 0.5rem 0;
 }
 .f-c-1span{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -893,6 +893,14 @@ footer {
     background: #fcf7e3;
     border-radius: 40px;
     height: 80%;
+    box-shadow: 0 3px 12px rgba(41,94,142,0.12);
+     transition: 
+       box-shadow 0.25s,
+       transform 0.22s cubic-bezier(.22,1.2,.36,1);
+}
+.f-c-1span:hover {
+  box-shadow: 0 12px 18px rgba(41,94,142,0.22);
+  transform: translateY(-13px) scale(1.03); /* key part for jump up */
 }
 .f-column1 span a {
     text-decoration: none;
