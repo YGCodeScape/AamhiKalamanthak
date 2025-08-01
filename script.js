@@ -8,9 +8,8 @@ var navtl = gsap.timeline();
 function navigationAnimation() {
 
   navtl.from(".header", {
-
      height: 0,
-     duration: 0.8,
+     duration: 1.1,
      opacity: 0,
   })
   navtl.from(".word-mark", {
@@ -18,21 +17,27 @@ function navigationAnimation() {
      duration: 0.5,
      opacity: 0,
   })
+  navtl.from(".menu-icon", {
+      y: -150,
+      duration: 0.3,
+      stagger: 0.2,
+      opacity: 0,
+  })
   navtl.from(".nav-hold h4", {
       y: -150,
       duration: 0.6,
       stagger: 0.2,
       opacity: 0,
   })
-    navtl.from(".menu-icon", {
-      y: -150,
-      duration: 0.3,
-      opacity: 0,
+  navtl.from(".author-img-sec", {
+     opacity: 0,
+     duration: 0.5,
+     scale: 0,
   })
 }
-navigationAnimation();
+// navigationAnimation();
 
-
+// menu bar animation
 function menuTlAnimation() {
     // Set menu off-screen and hidden before animation starts
     tl.set(".menu", {
@@ -79,10 +84,6 @@ menuItems.forEach(item => {
 }
 menuTlAnimation();
 
-// poem btn animation 
-
-
-
 // poem focus model
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
@@ -121,6 +122,8 @@ window.addEventListener("click", (e) => {
 });
 }
 poemModelFocus();
+
+// poem section animation
 // -----------------------
 
 function ShowcaseSlider() {
@@ -167,10 +170,10 @@ cards.forEach((card, i) => {
 // ShowcaseSlider();
 
 //---------------spite text
-const quotes = document.querySelectorAll(".hero-left");
+const quotes = document.querySelectorAll(".hero-left .hero-title");
 
 function setupSplits() {
-  navtl2 = gsap.timeline();
+  leftText = gsap.timeline();
 
   quotes.forEach((quote) => {
     // Reset if needed
@@ -185,16 +188,35 @@ function setupSplits() {
     });
 
     // Set up the anim
-    quote.anim = navtl2.from(quote.split.chars, {
+    quote.anim = leftText.from(quote.split.chars, {
       opacity: 0,
-      duration: 0.6,
-      ease: "circ.out",
+      duration: 0.4,
+      ease: 'circ.inOut',
       x: -80,
-      stagger: 0.02,
-      delay: 3,
+      stagger: 0.05,
     });
+
+      const split2 = SplitText.create(".hero-p", {
+     type: "lines"
   });
+  // Animate lines
+  leftText.from(split2.lines, {
+    rotationX: -100,
+    transformOrigin: "50% 50% -160px",
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.25
+  });
+
+  });
+    leftText.from(".sub-text", {
+    opacity: 0,
+    duration: 0.4,
+    scale: 0
+  })
 }
 
 ScrollTrigger.addEventListener("refresh", setupSplits);
 setupSplits();
+// ------------------
