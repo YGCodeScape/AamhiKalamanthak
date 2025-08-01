@@ -3,12 +3,49 @@ var closeI = document.querySelector(".close");
 var menuItems = document.querySelectorAll(".menu-tag a")
 
 var tl = gsap.timeline();
+var navtl = gsap.timeline();
+
+function navigationAnimation() {
+
+  navtl.from(".header", {
+
+     height: 0,
+     duration: 0.8,
+     opacity: 0,
+  })
+  navtl.from(".word-mark", {
+     x : -150,
+     duration: 0.5,
+     opacity: 0,
+  })
+  navtl.from(".nav-hold h4", {
+      y: -150,
+      duration: 0.6,
+      stagger: 0.2,
+      opacity: 0,
+  })
+    navtl.from(".menu-icon", {
+      y: -150,
+      duration: 0.3,
+      opacity: 0,
+  })
+}
+navigationAnimation();
 
 
 function menuTlAnimation() {
-    tl.from(".menu", {
-    right: "-100%",
-    duration: 0.6,
+    // Set menu off-screen and hidden before animation starts
+    tl.set(".menu", {
+        right: "-100%",
+        opacity: 0,
+        pointerEvents: "none"
+    });
+
+    tl.to(".menu", {
+       right: "-4%",
+       opacity: 1,
+       pointerEvents: "auto",
+       duration: 0.6,
 })
 
 tl.from(".menu h4", {
@@ -128,3 +165,36 @@ cards.forEach((card, i) => {
 });
 }
 // ShowcaseSlider();
+
+//---------------spite text
+const quotes = document.querySelectorAll(".hero-left");
+
+function setupSplits() {
+  navtl2 = gsap.timeline();
+
+  quotes.forEach((quote) => {
+    // Reset if needed
+    if (quote.anim) {
+      quote.anim.progress(1).kill();
+      quote.split.revert();
+    }
+
+    quote.split = SplitText.create(quote, {
+      type: "words,chars",
+      linesClass: "split-line"
+    });
+
+    // Set up the anim
+    quote.anim = navtl2.from(quote.split.chars, {
+      opacity: 0,
+      duration: 0.6,
+      ease: "circ.out",
+      x: -80,
+      stagger: 0.02,
+      delay: 3,
+    });
+  });
+}
+
+ScrollTrigger.addEventListener("refresh", setupSplits);
+setupSplits();

@@ -101,13 +101,16 @@ nav {
     height: 33rem;
     background-color: #dda25eec;
     position: absolute;
-    right: -4%;
+    /* right: -4%; */
+    right: -100%; /* <-- Hide off-screen */
     top: -3.1rem;
     backdrop-filter: blur(10px);
     z-index: 9;
     padding-top: 150px;
     padding-left: 25px;
     border-bottom-left-radius: 50px;
+    opacity: 0; /* <-- Hide visually */
+    pointer-events: none; /* Prevent clicks */
 }
 
 .menu h4 {
@@ -163,7 +166,9 @@ nav {
     flex-direction: row;
     background-color: #fefae028;
 }
-
+.split-line {
+    overflow: hidden;
+  }
 .hero-left {
     width: 50%;
     height: 100%;
@@ -171,6 +176,7 @@ nav {
     flex-direction: column;
     padding-left: 5rem;
     padding-top: 12rem;
+    overflow: hidden;
 }
 .title {
     font-size: 2.5rem;
