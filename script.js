@@ -133,7 +133,7 @@ menuItems.forEach(item => {
 }
 menuTlAnimation();
 
-// gsap for books and featured poem
+// gsap for books and featured poem and review section
 function Featured_BookAnimation() {
 
 gsap.from(".poem-sec .f-text", {
@@ -160,7 +160,6 @@ gsap.from(".poem-container .poem-frame", {
   }
 })
 
-
 gsap.from(".books-frame .book-d", {
   opacity: 0,
   x: -50,
@@ -175,6 +174,7 @@ gsap.from(".books-frame .book-d", {
 })
 }
 Featured_BookAnimation();
+
 //--- poem focus model-----
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
@@ -257,3 +257,16 @@ cards.forEach((card, i) => {
 });
 }
 ShowcaseSlider();
+
+//------------------------
+gsap.from(".masonry-div .review-card", {
+  opacity: 0,
+  y: -50,
+  stagger: 0.6,
+  scrollTrigger: {
+    trigger: ".masonry-div",
+    start: "top 50%",
+    end: "bottom bottom",
+    scrub: true,
+  }
+})
