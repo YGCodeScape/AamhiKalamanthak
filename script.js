@@ -2,42 +2,42 @@ var menu = document.querySelector(".menu-icon");
 var closeI = document.querySelector(".close");
 var menuItems = document.querySelectorAll(".menu-tag a")
 
-var tl = gsap.timeline();
-var navtl = gsap.timeline();
+var tlMenu = gsap.timeline();
+var navTl = gsap.timeline();
 
 function navigationAnimation() {
 
-  navtl.from(".header", {
+   navTl.from(".header", {
      height: 0,
      duration: 1.1,
      opacity: 0,
   })
-  navtl.from(".word-mark", {
+   navTl.from(".word-mark", {
      x : -150,
      duration: 0.5,
      opacity: 0,
   })
-  navtl.from(".menu-icon", {
+   navTl.from(".menu-icon", {
       y: -150,
       duration: 0.3,
       stagger: 0.2,
       opacity: 0,
   })
-  navtl.from(".nav-hold h4", {
+   navTl.from(".nav-hold h4", {
       y: -150,
       duration: 0.6,
       stagger: 0.2,
       opacity: 0,
   })
-  // navtl.from(".author-img-sec", {
-  //    opacity: 0,
-  //    duration: 0.5,
-  //    scale: 0,
-  // })
+   navTl.from(".author-img-sec", {
+     opacity: 0,
+     duration: 0.5,
+     scale: 0,
+  })
 }
-// navigationAnimation();
+navigationAnimation();
 
-//---------------spite text
+//---------spite text
 const quotes = document.querySelectorAll(".hero-left .hero-title");
 
 function setupSplits() {
@@ -84,41 +84,38 @@ function setupSplits() {
     scale: 0
   })
 }
+ScrollTrigger.addEventListener("refresh", setupSplits);
 
-// ScrollTrigger.addEventListener("refresh", setupSplits);
-// ------------------
-
-
-// menu bar animation---
+//---- menu bar animation---
 function menuTlAnimation() {
     // Set menu off-screen and hidden before animation starts
-    tl.set(".menu", {
+    tlMenu.set(".menu", {
         right: "-100%",
         opacity: 0,
         pointerEvents: "none"
     });
 
-    tl.to(".menu", {
+    tlMenu.to(".menu", {
        right: "-4%",
        opacity: 1,
        pointerEvents: "auto",
        duration: 0.6,
 })
 
-tl.from(".menu h4", {
-    x : 150,
-    duration: 0.4,
-    stagger : 0.2,
-    opacity: 0,
-})
-tl.from(".menu i", {
-    opacity: 0,
-})
+    tlMenu.from(".menu h4", {
+        x : 150,
+        duration: 0.4,
+        stagger : 0.2,
+        opacity: 0,
+     })
+    tlMenu.from(".menu i", {
+       opacity: 0,
+     })
 
-tl.pause()
+    tlMenu.pause()
 
 menu.addEventListener("click", function() {
-    tl.play();
+    tlMenu.play();
 })
 closeI.addEventListener("click", function(){
     gsap.to(".menu .close", {
@@ -126,17 +123,59 @@ closeI.addEventListener("click", function(){
         duration: 0.3,
         ease: "power2.out"
     })
-    tl.reverse();
+    tlMenu.reverse();
 })
 
 menuItems.forEach(item => {
-  item.addEventListener("click", () => tl.reverse());
+  item.addEventListener("click", () => tlMenu.reverse());
 });
 
 }
 menuTlAnimation();
 
-// poem focus model-----
+// gsap for books and featured poem
+function Featured_BookAnimation() {
+
+gsap.from(".poem-sec .f-text", {
+   opacity: 0,
+   y: -60,
+   scrollTrigger: {
+       trigger: ".poem-sec .f-text",
+       scroller: "body",
+      //  markers: true,
+       start: "top 40%",
+   }
+})
+
+gsap.from(".poem-container .poem-frame", {
+  opacity: 0,
+  y: -50,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".poem-container",
+    start: "top 50%",
+    end: "bottom 80%",
+    scrub: true,
+    // markers: true
+  }
+})
+
+
+gsap.from(".books-frame .book-d", {
+  opacity: 0,
+  x: -50,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".books-frame",
+    start: "top 60%",
+    end: "top 40%",
+    scrub: true,
+    // markers: true
+  }
+})
+}
+Featured_BookAnimation();
+//--- poem focus model-----
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
 const modalTitle = document.getElementById("modalTitle");
@@ -175,7 +214,6 @@ window.addEventListener("click", (e) => {
 }
 poemModelFocus();
 
-// -----------------------
 //----- Showcase Slider Animation
 function ShowcaseSlider() {
 
@@ -218,4 +256,4 @@ cards.forEach((card, i) => {
   );
 });
 }
-// ShowcaseSlider();
+ShowcaseSlider();
