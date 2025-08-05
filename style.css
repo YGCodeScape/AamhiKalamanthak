@@ -1041,7 +1041,7 @@ footer {
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
-@media  (max-width: 360px) {
+@media  (max-width: 375px) {
     html {
       scroll-padding-top: 100px;
       overflow-x: hidden;
@@ -1076,6 +1076,7 @@ footer {
        width: 100%;
        height: 60vh;
    }
+
    .author-img-sec {
     width: 22rem;
     height: 22rem;
@@ -1104,8 +1105,8 @@ footer {
         margin-left: 0.3rem;
     }
     .sub-text {
-       font-size: 18px;
-    }
+       font-size: 1rem;
+   }
     .poem-container {
         height: auto;
         flex-direction: column;
@@ -1308,7 +1309,7 @@ footer {
 
 }
 /* Portrait Large mobile */
-@media (min-width: 361px) and (max-width: 767px) { 
+@media (min-width: 376px) and (max-width: 767px) { 
     html {
       scroll-padding-top: 110px;
    }
@@ -1346,6 +1347,9 @@ footer {
    .hero-right {
        width: 100%;
        height: 50vh;
+   }
+   .sub-text {
+     font-size: 1.1rem;
    }
    .author-img-sec {
     width: 22rem;
@@ -1604,30 +1608,28 @@ footer {
     .modal-content {
         width: 40vw;
     }
-    .poem-sec {
-        margin: 0;
+    .poem-container {
+        gap: 1rem;
+    }   
+     .poem-frame {
+        width: 30vw;
+        height: 50vh;
     }
-    .featured-poem-sec {
-        width: 40%;
+    .poem-holder {
+        height: auto;
     }
-    .f-poem-hold {
-        width: 35vw;
+    .poem-title {
+        margin-top: 0.4rem;
+        font-size: 1.5rem;
     }
-    .latest-poem-sec {
-        width: 60%;
-        grid-column-gap: 20px;
-        grid-template-columns: 220px 220px;
+    .poem-content {
+        font-size: 0.9rem;
     }
-    .f-p-text {
-        margin: 0;
-    }
-    .poem-frame {
-        width: 100%;
-    }
+
     .read-more {
         width: 16vw;
     }
-    .extra-frame {
+    .extra-p-frame {
         display: none;
     }
     .read-all-btn {
@@ -1707,38 +1709,30 @@ footer {
         width: 100%;
     }
 
-    .poem-sec {
-        margin: 0;
-    }
-    .featured-poem-sec {
-        width: 40%;
-    }
-    .f-poem-hold {
-        width: 35vw;
-    }
-    .f-poem-content {
-        font-size: 1.6rem;
-    }
-    .latest-poem-sec {
-        width: 60%;
-        grid-column-gap: 20px;
-        grid-template-columns: 220px 220px;
-    }
-    .f-p-text {
-        margin: 0;
+    .poem-container {
+        gap: 1rem;
     }
     .poem-frame {
         width: 100%;
+        height: 50vh;
     }
+    .poem-holder {
+        height: auto;
+    }
+    .poem-title {
+        margin-top: 0.4rem;
+        font-size: 1.5rem;
+    }
+    .poem-content {
+        font-size: 0.9rem;
+    }
+
     .read-more {
         width: 16vw;
     }
-        .extra-frame {
-        display: none;
-    }
+
     .read-all-btn {
-        width: 18vw;
-        margin-right: 13rem;
+        width: 22vw;
     }
      .modal-content {
         width: 35vw;
@@ -1770,6 +1764,14 @@ footer {
 
     .review-page {
         height: 100vh;
+    }
+    .scroll-slider-title {
+         margin-left: 0;
+    }
+    .intro-text p {
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 0.4rem 1.2rem;
     }
     .masonry-div {
        column-count: 3;
