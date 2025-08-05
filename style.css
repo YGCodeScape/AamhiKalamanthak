@@ -683,17 +683,26 @@ body.modal-open {
     margin-left: 3rem;
 }
 .intro-text p {
-    width: 80%;
-    color: #14746f;
-    font-size: 1rem;
+  width: 80%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #903409;
+  font-size: 1rem;
   font-weight: 600;
-    font-family: "Comic Relief", system-ui;
-  letter-spacing: 1.4px;
+  font-family: "Comic Relief", system-ui;
+  letter-spacing: 1.2px;
   line-height: 1.3;
-  padding: 1rem;
-  /* border: 1px solid #0077b6; */
+  padding: 0.4rem 2rem;
+  /* border: 1px solid #0077b6;
   border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-right-radius: 40px; */
+  border-radius: 16px;
+  background: url(https://i.pinimg.com/1200x/03/8a/e7/038ae754aa9442afe56e51560cab8bb6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
 }
 .scroll-slider-title {
@@ -703,9 +712,9 @@ body.modal-open {
   font-family: "Sansation", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 1rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
   text-transform: capitalize;
-  color: #036666;
+  color: #c7470c;
 }
 
 .scroll-slider-images {
@@ -1219,9 +1228,10 @@ footer {
        margin-left: 1rem;
    }
    .intro-text p {
-       width: 90%;
+       width: 98%;
+       height: 30vh;
        font-size: 0.8rem;
-       margin-left: 0.8rem;
+       margin: 0 0.2rem;
    }
 
    .scroll-slider-images {
@@ -1467,12 +1477,13 @@ footer {
    }
    .scroll-slider-title {
        font-size :1.5rem;
-       margin-left: 1rem;
+       margin-left: 1em;
    }
    .intro-text p {
-       width: 90%;
+       width: 98%;
+       height: 30vh;
        font-size: 0.8rem;
-       margin-left: 0.8rem;
+       margin: 0 0.2rem;
    }
 
    .scroll-slider-images {
