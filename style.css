@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
+    --white-background: rgba(255, 255, 255, 0.95);
     --nav-border: 2px solid #E26E01;
     --primary-color: #99582a;
     --secondary-color: #bc6c25;
-    --accent-color: #ef476f;
+    --featured-color: #ef476f;
     --text-dark: #540b0e;
     --text-light: #964a07;
+    --poem-lines: #ff6600d7;
     --bg-light: #fefae028;
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-medium: rgba(0, 0, 0, 0.15);
-   --font-ComicRelief : "Comic Relief", system-ui;
+    --font-primary: "Outfit", sans-serif;
+    --font-marathi: "Tiro Devanagari Marathi", serif;
+    --font-display: "Rozha One", serif;
+    --font-decorative: "Kalam", cursive;
+    --font-body: "Poppins", sans-serif;
+    --font-accent: "Comic Relief", system-ui;
+    --font-clean: "Sansation", sans-serif;
 }
 
 * {
@@ -72,7 +80,7 @@ nav {
     gap: 1.2rem;
 }
 .nav-tag {
-    padding: 0.3rem 0.6rem;
+    padding: 0.3rem 0.3rem;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -97,7 +105,7 @@ nav {
     font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
-    font-family:var(--font-ComicRelief);
+    font-family:var(--font-accent);
     color: var(--text-dark);
 }
 .menu {
@@ -127,7 +135,7 @@ nav {
     font-weight: 400;
     color: var(--text-dark);
     font-size: 30px;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-transform: capitalize;
     padding: 0.3rem;
     border: none;
@@ -185,14 +193,14 @@ nav {
 .title {
     font-size: 2.5rem;
     font-weight:600;
-    font-family: "Tiro Devanagari Marathi", serif;
+    font-family: var(--font-marathi);
     color: var(--primary-color);
     margin-bottom: 3px;
     line-height: 1;
 }
 .author-name {
     font-size: 3rem;
-    font-family: "Rozha One", serif;
+    font-family: var(--font-display);
     text-transform: capitalize;
     color: var(--primary-color);
     letter-spacing: 2px;
@@ -203,7 +211,7 @@ nav {
     text-align: start;
     font-size: 25px;
     font-weight: 400;
-    font-family: "Tiro Devanagari Marathi", serif;
+    font-family: var(--font-marathi);
     color: var(--secondary-color);
     margin-left: 2rem;
     margin-top: 1rem;
@@ -214,7 +222,7 @@ nav {
 .sub-text {
     font-size: 25px;
     font-weight:600;
-    font-family: "Tiro Devanagari Marathi", serif;
+    font-family: var(--font-marathi);
     color: var(--secondary-color);
     line-height: 1;
     transform: scale(1.1);
@@ -275,7 +283,7 @@ nav {
     margin-top: 3rem;
     font-size: 2.5rem;
     font-weight: 600;
-    font-family: "Comic Relief", system-ui;
+    font-family:var(--font-accent);
     color: var(--featured-color);
 }
 .poem-frame {
@@ -304,7 +312,7 @@ nav {
     color:#ffffff;
     text-shadow: 2px 2px 8px #ffcba0, 0 2px 0 #f87924d7;
     font-size: 1.6rem;
-    font-family: "Kalam", cursive;
+    font-family: var(--font-decorative);
     font-weight: 500;
     line-height: normal;
     margin-top: 1.4rem;
@@ -315,7 +323,7 @@ nav {
     text-shadow: 2px 2px 8px #ffbda9ad, 0 2px 0 rgb(255, 255, 255);
     font-size: 0.9rem;
     font-weight: 700;
-    font-family: "Tiro Devanagari Marathi", serif;
+    font-family: var(--font-marathi);
     text-align: center;
     line-height: 2;
     margin: 1rem 0 0 0;
@@ -333,7 +341,7 @@ nav {
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     background: transparent;
     text-align: center;
     border: 2px solid rgb(255, 255, 255);
@@ -440,7 +448,7 @@ button::after {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-transform: capitalize;
 	letter-spacing: 0.05rem;
     color: #fff;
@@ -506,7 +514,7 @@ button::after {
     color:#f87924d7;
     text-shadow: 2px 2px 8px #f5d776, 0 2px 0 #f5be28d7;
     font-size: 2rem;
-    font-family: "Kalam", cursive;
+    font-family: var(--font-decorative);
     font-weight: 500;
     line-height: normal;
     margin-top: 1rem;
@@ -517,7 +525,7 @@ button::after {
     text-shadow: 2px 2px 8px #fcd66ead, 0 1px 0 #ffd561d8;
     font-size: 0.8rem;
     font-weight: 500;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-body);
     text-align: center;
     line-height: 2;
     margin: 1rem 0 0 0;
@@ -557,7 +565,7 @@ body.modal-open {
     font-weight: 600;
     letter-spacing: 1px;
     color: #3c096c;
-    font-family: "Comic Relief", system-ui;
+    font-family: var(--font-accent);
     text-transform: capitalize;
 }
 .book-wrapper {
@@ -612,7 +620,7 @@ body.modal-open {
 .book-title {
     font-size: 1rem;
     font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     width: 80%;
     margin-bottom: 0.2rem;
     margin-top: 4%;
@@ -624,7 +632,7 @@ body.modal-open {
 .book-content {
     font-size: 1rem;
     font-weight: 600;
-    font-family: "Comic Relief", system-ui;
+    font-family: var(--font-accent);
     width: 90%;
     margin: 0.4rem 0;
     color: #fcf9ff;
@@ -649,7 +657,7 @@ body.modal-open {
 .buy-now-btn a{
     font-size: 1rem;
     font-weight: 600;
-    font-family: "Comic Relief", system-ui;
+    font-family: var(--font-accent);
     color: #f4effa;
     text-decoration: none;
 }
@@ -695,7 +703,7 @@ body.modal-open {
   color: #903409;
   font-size: 1rem;
   font-weight: 600;
-  font-family: "Comic Relief", system-ui;
+  font-family: var(--font-accent);
   letter-spacing: 1.2px;
   line-height: 1.3;
   padding: 0.4rem 2rem;
@@ -710,7 +718,7 @@ body.modal-open {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
-  font-family: "Sansation", sans-serif;
+  font-family: var(--font-clean);
   letter-spacing: 1px;
   margin-bottom: 1rem;
   margin-left: 3rem;
@@ -730,11 +738,11 @@ body.modal-open {
   height: 100%;
   top: 0;
   left: 0;
-  /* opacity: 0;
+  opacity: 0;
   transform: translateX(100px) rotate(-30deg);
   will-change: transform, opacity;
   backface-visibility: hidden;
-  transform-style: preserve-3d; */
+  transform-style: preserve-3d;
 }
 
 .slider-card img {
@@ -755,14 +763,14 @@ body.modal-open {
 .review-page h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #001d3d;
     text-align: center;
 }
 .review-page p {
     font-size: 1.2rem;
     font-weight: 400;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #003049;
     text-align: center;
     margin-bottom: 2rem;
@@ -808,13 +816,13 @@ body.modal-open {
     font-weight: 600;
     letter-spacing: 1px;
     line-height: 1;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
 }
 .user-info span {
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 1px;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #888888e8;
     margin-left: 0.4rem;
 }
@@ -822,7 +830,7 @@ body.modal-open {
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.5;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #3d405b;
 }
 
@@ -837,7 +845,7 @@ body.modal-open {
 .send-review-d span {
     font-size: 1rem;
     font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-transform: uppercase;
     color: #001d3d;
     letter-spacing: 1px;
@@ -846,7 +854,7 @@ body.modal-open {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-transform: uppercase;
     padding-bottom: 0.2rem;
     display: inline-block;
@@ -915,9 +923,9 @@ footer {
     border-radius: 40px;
     height: 80%;
     box-shadow: 0 3px 12px rgba(41,94,142,0.12);
-     transition: 
-       box-shadow 0.25s,
-       transform 0.22s cubic-bezier(.22,1.2,.36,1);
+    transition: 
+      box-shadow 0.25s,
+      transform 0.22s cubic-bezier(.22,1.2,.36,1);
 }
 .f-c-1span:hover {
   box-shadow: 0 12px 18px rgba(41,94,142,0.22);
@@ -927,7 +935,7 @@ footer {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #0e4473;
     display: flex;
     align-items: center;
@@ -940,7 +948,7 @@ footer {
     border-radius: 50px;
     font-size: 2rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     padding-top: 0.4rem;
     margin-left: 0.4rem;
 }
@@ -951,7 +959,7 @@ footer {
     font-size: 2rem;
     font-weight: 500;
     color: #fff;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-align: center;
     letter-spacing: 0.2rem;
     padding-top: 1rem;
@@ -971,7 +979,7 @@ footer {
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     color: #fff;
     margin-top: 0.2rem;
     display: flex;
@@ -983,7 +991,7 @@ footer {
 .social-i-d i {
     font-size: 4rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -1000,7 +1008,7 @@ footer {
 .f-column3 p {
     font-size: 1.4rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     text-align: center;
     margin: 2rem 0 0.9rem 0;
 }
@@ -1017,7 +1025,7 @@ footer {
 .contact-d span {
     font-size: 1.8rem;
     font-weight: 500;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-primary);
     letter-spacing: 0.2rem;
     gap: 1rem;
 }
@@ -1036,7 +1044,7 @@ footer {
 .rights-d span {
     font-size: 0.6rem;
     font-weight: 400;
-    font-family: "Sansation", sans-serif;
+    font-family: var(--font-clean);
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
