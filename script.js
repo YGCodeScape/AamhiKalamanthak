@@ -4,6 +4,12 @@ var menuItems = document.querySelectorAll(".menu-tag a")
 var tlMenu = gsap.timeline();
 var navTl = gsap.timeline();
 
+window.addEventListener("load", () => {
+  // Allow layout to settle after images, fonts, etc.
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 500); // 0.5s delay ensures accurate measurements
+});
 
 function navigationAnimation() {
 
@@ -266,6 +272,7 @@ ScrollTrigger.matchMedia({
     gsap.from(".masonry-div .review-card", {
      opacity: 0,
      y: -50,
+     stagger: 0.6,
      scrollTrigger: {
        trigger: ".masonry-div",
        start: "top 50%",
