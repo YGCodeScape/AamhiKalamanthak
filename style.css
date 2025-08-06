@@ -42,8 +42,8 @@ header {
     height: auto;
     z-index: 100;
     margin: 0;
-    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 6px var(--shadow-light);
+    background: var(--white-background);
     backdrop-filter: blur(10px);
 }
 
@@ -103,7 +103,7 @@ nav {
 .menu {
     width: 25%;
     height: 33rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--white-background);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px var(--shadow-light);
     position: absolute;
@@ -137,12 +137,12 @@ nav {
 }
 
 .menu h4 a:hover {
-     color: #964a07;
+     color: var(--text-light);
      letter-spacing: 4px;
 } 
 
 .close {
-    background-color: #964a07;
+    background-color:var(--text-light);
     color:#ffe6a7;
     border-radius: 50%;
     font-size: 23px;
@@ -168,7 +168,7 @@ nav {
     position: relative;
     display: flex;
     flex-direction: row;
-    background-color: #fefae028;
+    background-color: var(--bg-light);
 }
 .split-line {
     overflow: hidden;
@@ -186,7 +186,7 @@ nav {
     font-size: 2.5rem;
     font-weight:600;
     font-family: "Tiro Devanagari Marathi", serif;
-    color: #99582a;
+    color: var(--primary-color);
     margin-bottom: 3px;
     line-height: 1;
 }
@@ -194,7 +194,7 @@ nav {
     font-size: 3rem;
     font-family: "Rozha One", serif;
     text-transform: capitalize;
-    color: #99582a;
+    color: var(--primary-color);
     letter-spacing: 2px;
     line-height: 1.2;
 }
@@ -204,7 +204,7 @@ nav {
     font-size: 25px;
     font-weight: 400;
     font-family: "Tiro Devanagari Marathi", serif;
-    color: #bc6c25;
+    color: var(--secondary-color);
     margin-left: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -215,7 +215,7 @@ nav {
     font-size: 25px;
     font-weight:600;
     font-family: "Tiro Devanagari Marathi", serif;
-    color: #964a07;
+    color: var(--secondary-color);
     line-height: 1;
     transform: scale(1.1);
 }
@@ -276,7 +276,7 @@ nav {
     font-size: 2.5rem;
     font-weight: 600;
     font-family: "Comic Relief", system-ui;
-    color: #ef476f;
+    color: var(--featured-color);
 }
 .poem-frame {
     position: relative;
@@ -311,7 +311,7 @@ nav {
 }
 .poem-content {
     width: 100%;
-    color: #ff6600d7;
+    color: var(--poem-lines);
     text-shadow: 2px 2px 8px #ffbda9ad, 0 2px 0 rgb(255, 255, 255);
     font-size: 0.9rem;
     font-weight: 700;
