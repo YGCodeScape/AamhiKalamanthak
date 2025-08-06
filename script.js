@@ -260,14 +260,32 @@ cards.forEach((card, i) => {
 ShowcaseSlider();
 
 //------------------------
-gsap.from(".masonry-div .review-card", {
-  opacity: 0,
-  y: -50,
-  scrollTrigger: {
-    trigger: ".masonry-div",
-    start: "top 50%",
-    end: "bottom bottom",
-    scrub: true,
-    markers: true
-  }
+ScrollTrigger.matchMedia({
+  // Desktop (min-width 769px)
+  "(min-width:  768px)": function () {
+    gsap.from(".masonry-div .review-card", {
+     opacity: 0,
+     y: -50,
+     scrollTrigger: {
+       trigger: ".masonry-div",
+       start: "top 50%",
+       end: "bottom bottom",
+       scrub: true,
+     }
+   })
+  },
+
+  // Mobile (max-width 768px)
+  "(max-width: 767px)": function () {
+    gsap.from(".masonry-div .review-card", {
+     opacity: 0,
+     y: -50,
+     scrollTrigger: {
+       trigger: ".masonry-div",
+       start: "top 50%",
+       end: "top 80%",
+       scrub: true,
+     }
+   })
+   }
 })

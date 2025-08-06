@@ -47,3 +47,16 @@ social  i hover
     color: #fcf7e3;
 
 color: #14746f;
+
+-----
+    gsap.from(".masonry-div .review-card", {
+     opacity: 0,
+     y: -50,
+     scrollTrigger: {
+       trigger: ".masonry-div",
+       start: "top 50%",
+       end: "bottom bottom",
+       scrub: true,
+       markers: true
+     }
+   })
