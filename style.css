@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
@@ -93,7 +92,6 @@ nav {
     font-weight: 400;
     text-decoration: none;
     font-family: "Comic Relief", system-ui;
-    /* color: #bc6c25; */
     color: #540b0e;
 }
 .menu {
@@ -101,16 +99,15 @@ nav {
     height: 33rem;
     background-color: #dda25eec;
     position: absolute;
-    /* right: -4%; */
-    right: -100%; /* <-- Hide off-screen */
+    right: -100%;
     top: -3.1rem;
     backdrop-filter: blur(10px);
     z-index: 9;
     padding-top: 150px;
     padding-left: 25px;
     border-bottom-left-radius: 50px;
-    opacity: 0; /* <-- Hide visually */
-    pointer-events: none; /* Prevent clicks */
+    opacity: 0;
+    pointer-events: none;
 }
 
 .menu h4 {
@@ -123,7 +120,6 @@ nav {
     color:#290d02;
     font-size: 30px;
     font-family: "Outfit", sans-serif;
-    /* font-family: "Comic Relief", system-ui; */
     text-transform: capitalize;
     padding: 0.3rem;
     border: none;
@@ -339,12 +335,12 @@ nav {
     background: rgba(168, 168, 168, 0.589);
     overflow: hidden; 
     opacity: 0;
-    transform: translateY(50px);  /* Start 50px below original position */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for both */
+    transform: translateY(50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .poem-holder:hover .read-more {
     opacity: 1;
-    transform: translateY(0); /* Return to original position */
+    transform: translateY(0);
 }
 /* --button  */
 button::before,
@@ -656,7 +652,7 @@ body.modal-open {
     height: 55%;
 }
 
-/*-----------show case page--------- */
+/*-----------show case page---- */
 .scroll-slider-section {
   position: relative;
   width: 100%;
@@ -695,9 +691,6 @@ body.modal-open {
   letter-spacing: 1.2px;
   line-height: 1.3;
   padding: 0.4rem 2rem;
-  /* border: 1px solid #0077b6;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px; */
   border-radius: 16px;
   background: url(https://i.pinimg.com/1200x/03/8a/e7/038ae754aa9442afe56e51560cab8bb6.jpg);
   background-repeat: no-repeat;
@@ -744,7 +737,7 @@ body.modal-open {
   image-rendering: crisp-edges;
 }
 
-/* review page ----------- */
+/* review page -------- */
 .review-page {
     background: linear-gradient(to right, #f9f4f9, #f2faff);
     padding: 2rem 1rem;
@@ -920,7 +913,7 @@ footer {
 }
 .f-c-1span:hover {
   box-shadow: 0 12px 18px rgba(41,94,142,0.22);
-  transform: translateY(-13px) scale(1.03); /* key part for jump up */
+  transform: translateY(-13px) scale(1.03);
 }
 .f-column1 span a {
     text-decoration: none;
@@ -987,7 +980,7 @@ footer {
     transition: transform 0.3s ease;
 }
 .social-i-d i:hover {
-      transform: scale(1.3); /* zoom effect */
+      transform: scale(1.3);
 }
 .social-i-d a:hover .icon-text {
     display: none;
