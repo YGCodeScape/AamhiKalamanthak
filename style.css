@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 :root {
+    --nav-border: 2px solid #E26E01;
     --primary-color: #99582a;
     --secondary-color: #bc6c25;
     --accent-color: #ef476f;
@@ -32,14 +33,6 @@ html {
  ::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
-.cursor {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    position: fixed;
-    background-color: rgba(233, 78, 212, 0.267);
-    transform: translate(-50%, -50%) scale(0);
-}
 
 header {
     position: fixed;
@@ -49,8 +42,9 @@ header {
     height: auto;
     z-index: 100;
     margin: 0;
-    background: #fff;
     box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 nav {
@@ -88,7 +82,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  border: 2px solid rgb(226, 110, 1);
+  border: var(--nav-border);
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   transform: scaleX(0);
@@ -104,12 +98,14 @@ nav {
     font-weight: 400;
     text-decoration: none;
     font-family:var(--font-ComicRelief);
-    color: #540b0e;
+    color: var(--text-dark);
 }
 .menu {
     width: 25%;
     height: 33rem;
-    background-color: #dda25eec;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px var(--shadow-light);
     position: absolute;
     right: -100%;
     top: -3.1rem;
@@ -129,7 +125,7 @@ nav {
     position: relative;
     font-size: 30px;
     font-weight: 400;
-    color:#290d02;
+    color: var(--text-dark);
     font-size: 30px;
     font-family: "Outfit", sans-serif;
     text-transform: capitalize;
@@ -561,7 +557,7 @@ body.modal-open {
     font-weight: 600;
     letter-spacing: 1px;
     color: #3c096c;
-    font-family: "Outfit", sans-serif;
+    font-family: "Comic Relief", system-ui;
     text-transform: capitalize;
 }
 .book-wrapper {

@@ -5,16 +5,6 @@ var tlMenu = gsap.timeline();
 var navTl = gsap.timeline();
 
 
-// Enhanced page load handler
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        if (typeof ScrollTrigger !== 'undefined') {
-            ScrollTrigger.refresh();
-        }
-    }, 500);
-});
-
-
 function navigationAnimation() {
 
    navTl.from(".header", {
@@ -278,12 +268,6 @@ gsap.from(".masonry-div .review-card", {
     start: "top 50%",
     end: "bottom bottom",
     scrub: true,
+    markers: true
   }
-}) 
-
-// Refresh ScrollTrigger on resize
-window.addEventListener('resize', () => {
-    if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.refresh();
-    }
-});
+})
