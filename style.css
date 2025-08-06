@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Comic+Relief:wght@400;700&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rozha+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+:root {
+    --primary-color: #99582a;
+    --secondary-color: #bc6c25;
+    --accent-color: #ef476f;
+    --text-dark: #540b0e;
+    --text-light: #964a07;
+    --bg-light: #fefae028;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+   --font-ComicRelief : "Comic Relief", system-ui;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -91,7 +103,7 @@ nav {
     font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
-    font-family: "Comic Relief", system-ui;
+    font-family:var(--font-ComicRelief);
     color: #540b0e;
 }
 .menu {
