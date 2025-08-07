@@ -34,7 +34,7 @@ function navigationAnimation() {
      scale: 0,
   })
 }
-navigationAnimation();
+// navigationAnimation();
 
 //---------spite text
 const quotes = document.querySelectorAll(".hero-left .hero-title");
@@ -83,7 +83,7 @@ function setupSplits() {
     scale: 0
   })
 }
-ScrollTrigger.addEventListener("refresh", setupSplits);
+// ScrollTrigger.addEventListener("refresh", setupSplits);
 
 //---- menu bar animation---
 function menuTlAnimation() {
@@ -215,23 +215,25 @@ poemModelFocus();
 
 //----- Showcase Slider Animation
 function ShowcaseSlider() {
-
 // Check screen width and set start position accordingly 368
-const isSmallScreen = window.innerWidth <= 480;
-const startValue = isSmallScreen ? "top top" : "top 50";
-
 const cards = document.querySelectorAll(".slider-card");
+
+const isSmallScreen = window.innerWidth <= 480;
+const startValue = isSmallScreen ? "top -50" : "top 50";
+const scrollDistance = isSmallScreen ? cards.length * 700 : cards.length * 500;
+
 
 let timeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".scroll-slider-section",
     start: startValue,
-    end: "+=" + (cards.length * 500),  // adjust scroll distance
+    end: "+=" + scrollDistance, // adjust scroll distance
     scrub: true,
     pin: true,
     // markers: true
   }
 });
+
 
 
 cards.forEach((card, i) => {
