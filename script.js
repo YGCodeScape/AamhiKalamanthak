@@ -161,7 +161,7 @@ gsap.from(".poem-container .poem-frame", {
 
 gsap.from(".books-frame .book-d", {
   opacity: 0,
-  x: -50,
+  y: -50,
   stagger: 0.3,
   scrollTrigger: {
     trigger: ".books-frame",
