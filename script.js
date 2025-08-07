@@ -4,13 +4,6 @@ var menuItems = document.querySelectorAll(".menu-tag a")
 var tlMenu = gsap.timeline();
 var navTl = gsap.timeline();
 
-window.addEventListener("load", () => {
-  // Allow layout to settle after images, fonts, etc.
-  setTimeout(() => {
-    ScrollTrigger.refresh();
-  }, 500); // 0.5s delay ensures accurate measurements
-});
-
 function navigationAnimation() {
 
    navTl.from(".header", {
@@ -191,7 +184,7 @@ const closeBtn = document.getElementById("closeModal");
 // Add click event to all read-more buttons
 document.querySelectorAll(".read-more").forEach(button => {
   button.addEventListener("click", function () {
-    const poemCard = this.closest(".poem-holder") || this.closest(".f-poem-hold");
+    const poemCard = this.closest(".poem-holder");
 
     const title = poemCard.querySelector(".PoemTitle").innerText;
     const content = poemCard.querySelector(".PoemContent").innerText;
@@ -216,7 +209,6 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
   }
-
 });
 }
 poemModelFocus();
@@ -262,37 +254,6 @@ cards.forEach((card, i) => {
     i * 1
   );
 });
+
 }
 ShowcaseSlider();
-
-//------------------------
-ScrollTrigger.matchMedia({
-  // Desktop (min-width 769px)
-  "(min-width:  768px)": function () {
-    gsap.from(".masonry-div .review-card", {
-     opacity: 0,
-     y: -50,
-     stagger: 0.6,
-     scrollTrigger: {
-       trigger: ".masonry-div",
-       start: "top 50%",
-       end: "bottom bottom",
-       scrub: true,
-     }
-   })
-  },
-
-  // Mobile (max-width 768px)
-  "(max-width: 767px)": function () {
-    gsap.from(".masonry-div .review-card", {
-     opacity: 0,
-     y: -50,
-     scrollTrigger: {
-       trigger: ".masonry-div",
-       start: "top 50%",
-       end: "top 80%",
-       scrub: true,
-     }
-   })
-   }
-})
