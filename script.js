@@ -34,9 +34,9 @@ function navigationAnimation() {
      scale: 0,
   })
 }
-// navigationAnimation();
+navigationAnimation();
 
-//---------spite text
+//--split text for landing page text---
 const quotes = document.querySelectorAll(".hero-left .hero-title");
 
 function setupSplits() {
@@ -83,7 +83,7 @@ function setupSplits() {
     scale: 0
   })
 }
-// ScrollTrigger.addEventListener("refresh", setupSplits);
+ScrollTrigger.addEventListener("refresh", setupSplits);
 
 //---- menu bar animation---
 function menuTlAnimation() {
@@ -233,8 +233,6 @@ let timeline = gsap.timeline({
     // markers: true
   }
 });
-
-
 
 cards.forEach((card, i) => {
   timeline.fromTo(card,
