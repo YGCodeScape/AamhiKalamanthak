@@ -218,7 +218,7 @@ function ShowcaseSlider() {
 
 // Check screen width and set start position accordingly
 const isSmallScreen = window.innerWidth <= 380;
-const startValue = isSmallScreen ? "top -100" : "top 50";
+const startValue = isSmallScreen ? "top top" : "top 50";
 
 const cards = document.querySelectorAll(".slider-card");
 
