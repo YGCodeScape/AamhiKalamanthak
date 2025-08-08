@@ -35,7 +35,7 @@ function navigationAnimation() {
      scale: 0,
   })
 }
-navigationAnimation();
+// navigationAnimation();
 
 //--split text for landing page text---
 const quotes = document.querySelectorAll(".hero-left .hero-title");
@@ -84,7 +84,7 @@ function setupSplits() {
     scale: 0
   })
 }
-ScrollTrigger.addEventListener("refresh", setupSplits);
+// ScrollTrigger.addEventListener("refresh", setupSplits);
 
 //---- menu bar animation---
 function menuTlAnimation() {
@@ -170,7 +170,7 @@ gsap.from(".books-frame .book-d", {
 })
 
 }
-SectionsAnimation();
+// SectionsAnimation();
 
 //--- poem focus model-----
 function poemModelFocus() {
@@ -254,4 +254,4 @@ cards.forEach((card, i) => {
 });
 
 }
-ShowcaseSlider();
+// ShowcaseSlider();
