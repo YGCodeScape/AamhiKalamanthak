@@ -1,6 +1,7 @@
 var menu = document.querySelector(".menu-icon");
 var closeI = document.querySelector(".close");
 var menuItems = document.querySelectorAll(".menu-tag a")
+
 var tlMenu = gsap.timeline();
 var navTl = gsap.timeline();
 
@@ -133,7 +134,7 @@ menuItems.forEach(item => {
 menuTlAnimation();
 
 // gsap for books and featured poem and review section
-function Featured_BookAnimation() {
+function SectionsAnimation() {
 
 gsap.from(".poem-sec .f-text", {
    opacity: 0,
@@ -141,7 +142,6 @@ gsap.from(".poem-sec .f-text", {
    scrollTrigger: {
        trigger: ".poem-sec .f-text",
        scroller: "body",
-      //  markers: true,
        start: "top 40%",
    }
 })
@@ -162,17 +162,15 @@ gsap.from(".poem-container .poem-frame", {
 gsap.from(".books-frame .book-d", {
   opacity: 0,
   y: -50,
-  stagger: 0.3,
+  stagger: 0.6,
   scrollTrigger: {
     trigger: ".books-frame",
     start: "top 60%",
-    end: "top 40%",
-    scrub: true,
-    // markers: true
   }
 })
+
 }
-Featured_BookAnimation();
+SectionsAnimation();
 
 //--- poem focus model-----
 function poemModelFocus() {
