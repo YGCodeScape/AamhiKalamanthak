@@ -1038,12 +1038,15 @@ footer {
     justify-content: center;
     text-align: center;
 }
-.rights-d span {
+.rights-d span, .rights-d a{
     font-size: 0.6rem;
     font-weight: 400;
     font-family: "Sansation", sans-serif;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+}
+.rights-d a {
+    color: #fff;
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
@@ -1618,8 +1621,7 @@ footer {
         display: none;
     }
     .read-all-btn {
-        width: 20vw;
-        margin-right: 12rem;
+        width: 30vw;
     }
     .book-d {
         width: 25vw;
@@ -1671,6 +1673,9 @@ footer {
         padding: 1rem 1.3rem;
     }
 
+    .contact-d span {
+        font-size: 1.4rem; 
+    }
     .f-c-1span {
         width: 30%;
     }
