@@ -1046,7 +1046,11 @@ footer {
     text-transform: uppercase;
 }
 .rights-d a {
-    color: #fff;
+    text-decoration: none;
+    color: #d6d6d6bb;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #d6d6d6bb;
+    text-align: center;
 }
 /*-----------------media query--- */
 /* Portrait Small mobile*/
