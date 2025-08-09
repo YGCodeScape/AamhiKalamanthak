@@ -171,7 +171,6 @@ gsap.from(".books-frame .book-d", {
 
 }
 SectionsAnimation();
-
 //--- poem focus model-----
 function poemModelFocus() {
 const modal = document.getElementById("poemModal");
