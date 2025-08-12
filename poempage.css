@@ -169,7 +169,7 @@ header {
 .poem-title {
     color:#ffffff;
     text-shadow: 2px 2px 8px #fdad6c, 0 2px 0 #fa741ad7;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: var(--font-decorative);
     font-weight: 500;
     line-height: normal;
@@ -289,20 +289,10 @@ button::after {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
   text-align: center;
   z-index: -1;
 }
-.modal-content::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 202, 177, 0.267); 
-    z-index: -1;
-}
+
 .modal-content h2 {
     color:#f87924d7;
     text-shadow: 2px 2px 8px #f5d776, 0 2px 0 #f5be28d7;
@@ -339,7 +329,7 @@ body.modal-open {
 /*-----------------media query--- */
 
 /* Small mobile */
-@media (max-width: 360px) { 
+@media (max-width: 375px) { 
     header {
         padding: 0.2rem 1rem;
     }
@@ -382,15 +372,14 @@ body.modal-open {
         font-size: 2rem;
     }
     .modal-content p {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
 
 }
 /* Large mobile */
-@media (min-width: 361px) and (max-width: 767px) {
+@media (min-width: 376px) and (max-width: 767px) {
         header {
         padding: 0.2rem 1rem;
-
     }
      .logo {
         width: 50vw;
@@ -423,6 +412,9 @@ body.modal-open {
         font-size: 1rem;
         line-height: 1.7;
     }
+    .poem-title {
+        font-size: 1.4rem;
+    }
     .modal-content {
         width: 100%;
         height: 80vh;
@@ -431,11 +423,11 @@ body.modal-open {
         font-size: 2rem;
     }
     .modal-content p {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 }
 /* toggle device*/
-@media (min-width: 768px) and (max-width: 920px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     #searchInput.active {
         width: 30vw;
     }
@@ -459,7 +451,7 @@ body.modal-open {
     } 
 }
 /* device nest hub */
-@media (min-width: 921px) and (max-width: 1024px) {
+@media (min-width: 1001px) and (max-width: 1224px) {
     .extra-frame {
         display: none;
     }
