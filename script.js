@@ -154,7 +154,6 @@ gsap.from(".poem-container .poem-frame", {
     trigger: ".poem-container",
     start: "top 50%",
     end: "bottom 80%",
-    scrub: true,
     // markers: true
   }
 })
