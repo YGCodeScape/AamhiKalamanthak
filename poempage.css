@@ -17,13 +17,25 @@ body {
     padding: 0;
     background: #fce9f7b0;
 }
+
 html {
     scroll-behavior: smooth;
+}
+ ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px dashed #99582a;
+  outline-offset: 2px;
 }
 header {
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 100;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,8 +45,8 @@ header {
     box-shadow: 0 2px 6px var(--shadow-light);
 }
 .logo {
-     width: 17vw;
-    height: 15vh;
+     width: 200px;
+    height: 100px;
     object-fit: cover;
     transition: transform 0.4s ease, opacity 0.3s ease;
 }
@@ -105,7 +117,7 @@ header {
 }
 /*---------------poem sections-  */
 .poem-section {
-    margin: 1rem 3rem;
+    margin: 2rem 3rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -333,7 +345,7 @@ body.modal-open {
     }
      .logo {
         width: 50vw;
-        height: 15vh;
+        height: 13vh;
     }
     header input {
         width: 10vw;
@@ -378,10 +390,11 @@ body.modal-open {
 @media (min-width: 361px) and (max-width: 767px) {
         header {
         padding: 0.2rem 1rem;
+
     }
      .logo {
-        width: 40vw;
-        height: 10vh;
+        width: 50vw;
+        height: 13vh;
     }
     header input {
         width: 10vw;

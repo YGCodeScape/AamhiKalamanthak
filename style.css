@@ -1066,6 +1066,9 @@ footer {
         width: 50vw;
         height: 15vh;
     }
+    .menu {
+        height: 60vh;
+    }
     .menu-icon {
         display: inline-block;
     }
